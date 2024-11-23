@@ -1,6 +1,6 @@
 import MainNavigation from "components/MainNavigation";
 
-function Home (): JSX.Element {
+function HomePage (): JSX.Element {
   return (
     <>
       <MainNavigation/>
@@ -32,4 +32,4 @@ function Home (): JSX.Element {
   );
 };
 
-export default Home;
+export default HomePage;

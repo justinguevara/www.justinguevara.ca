@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
                 
-function NotFound (): JSX.Element {
-throw 2;
+function NotFoundPage (): JSX.Element {
   return (
     <>
         <div className="front-page">
@@ -10,7 +9,7 @@ throw 2;
                     <section className="first-section">
                         <p>Page not found.</p>
                         <br/>
-                        <p>Return to <Link to="/"><u>home</u></Link> page.</p>
+                        <p>Return <Link to="/"><u>home</u></Link></p>
                     </section>
                 </div>
             </div>
@@ -19,4 +18,4 @@ throw 2;
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

@@ -16,7 +16,7 @@ body {
 
 .front-page .quotes .quote .person,
 .secondary-font {
-  font-family: Roboto, Arial, sans-serif
+  font-family: Arial, sans-serif
 }
 
 *,
@@ -424,13 +424,13 @@ a {
 
 .front-page .quotes .quote .content::before::before {
   content: '...';
-  font-family: Roboto, Arial, sans-serif
+  font-family: Arial, sans-serif
 }
 
 .front-page .quotes .quote .content::before {
   padding-left: 16px;
   content: '...';
-  font-family: Roboto, Arial, sans-serif
+  font-family: Arial, sans-serif
 }
 
 .front-page .link,
