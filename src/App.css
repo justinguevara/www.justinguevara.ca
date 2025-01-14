@@ -1,4 +1,22 @@
 @media screen and (max-width: 480px) {
+  .quotes {
+    margin-top: 64px;
+  }
+}
+
+@media screen and (max-width:1024px) and (min-width:481px) {
+  .quotes {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .quotes {
+    margin-top: 98px;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .temp {
     height: 16px;
   }
@@ -11,11 +29,9 @@
 }
 
 .home-heading-background {
-    background: url('/bg-min.png') no-repeat calc(100% + 10px) center;
-    height: 190px;
-    margin-top: 20px;
-    margin-bottom: 65px;
-    border: 4px solid black;
+    background: url('/i3-min.png') no-repeat center center;
+    height: 180px;
+    margin-bottom: 16px;
     background-size: auto;
 }
 

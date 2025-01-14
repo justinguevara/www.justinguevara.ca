@@ -8,6 +8,9 @@ function HomePage (): JSX.Element {
       <div className="front-page">
           <div className="center-block-element content-width">
             <div className="primary-content-container">
+                <div className="home-heading-background">
+                </div>
+
                 <section className="first-section">
                     <div className="name">Justin Guevara</div>
                     <ul className="secondary-font below-name">
@@ -16,8 +19,6 @@ function HomePage (): JSX.Element {
                     </ul>
                     <div className="secondary-font short-description"><span className="bold">Experienced Software Developer </span> based in <span className="bold"> Toronto, Canada</span>.</div>
                 </section>
-                <div className="home-heading-background">
-                </div>
 
                 <section className="quotes">
                     <div className="quote">
