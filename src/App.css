@@ -11,7 +11,7 @@
 }
 
 .home-heading-background {
-    background: url('/bg.png') no-repeat calc(100% + 10px) center;
+    background: url('/bg-min.png') no-repeat calc(100% + 10px) center;
     height: 190px;
     margin-top: 20px;
     margin-bottom: 65px;

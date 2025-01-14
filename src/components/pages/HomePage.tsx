@@ -9,7 +9,7 @@ function HomePage (): JSX.Element {
           <div className="center-block-element content-width">
             <div className="primary-content-container">
                 <section className="first-section">
-                    <div className="name ">Justin Guevara</div>
+                    <div className="name">Justin Guevara</div>
                     <ul className="secondary-font below-name">
                         <li className="email">j[at]guevarajust[dot]in</li>
                         <li><a href="https://linkedin.com/in/justinguevara" className="link">linkedin.com/in/justinguevara</a></li>
