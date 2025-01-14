@@ -1,4 +1,25 @@
 @media screen and (max-width: 480px) {
+  .temp {
+    height: 16px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .temp {
+    display: none;
+  }
+}
+
+.home-heading-background {
+    background: url('/bg.png') no-repeat calc(100% + 10px) center;
+    height: 190px;
+    margin-top: 20px;
+    margin-bottom: 65px;
+    border: 4px solid black;
+    background-size: auto;
+}
+
+@media screen and (max-width: 480px) {
   .header-primary {
     min-height: 1.5em
   }
@@ -283,10 +304,6 @@ a {
   }
 }
 
-.front-page .first-section {
-  padding-bottom: 128px
-}
-
 .front-page .name {
   line-height: 140%;
   font-weight: 700;
@@ -351,10 +368,6 @@ a {
     padding: 16px
   }
 
-  .front-page .first-section {
-    padding-bottom: 128px
-  }
-
   .front-page .name {
     font-size: 38px
   }
@@ -406,10 +419,6 @@ a {
 
   .front-page .primary-content-container {
     padding-top: 16px
-  }
-
-  .front-page .first-section {
-    padding-bottom: 48px
   }
 
   .front-page .name {

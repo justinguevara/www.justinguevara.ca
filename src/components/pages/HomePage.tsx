@@ -4,17 +4,21 @@ function HomePage (): JSX.Element {
   return (
     <>
       <MainNavigation/>
+      <div className="temp"></div>
       <div className="front-page">
           <div className="center-block-element content-width">
             <div className="primary-content-container">
                 <section className="first-section">
-                    <div className="name">Justin Guevara</div>
+                    <div className="name ">Justin Guevara</div>
                     <ul className="secondary-font below-name">
                         <li className="email">j[at]guevarajust[dot]in</li>
                         <li><a href="https://linkedin.com/in/justinguevara" className="link">linkedin.com/in/justinguevara</a></li>
                     </ul>
                     <div className="secondary-font short-description"><span className="bold">Experienced Software Developer </span> based in <span className="bold"> Toronto, Canada</span>.</div>
                 </section>
+                <div className="home-heading-background">
+                </div>
+
                 <section className="quotes">
                     <div className="quote">
                         <div className="content">you were great, and I would highly recommend you to anyone in the industry</div>
