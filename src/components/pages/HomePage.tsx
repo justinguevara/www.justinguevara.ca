@@ -6,10 +6,14 @@ function HomePage (): JSX.Element {
       <MainNavigation/>
       <div className="temp"></div>
       <div className="front-page">
-          <div className="center-block-element content-width">
-            <div className="primary-content-container">
-                <div className="home-heading-background">
-                </div>
+
+    <div className="center-block-element content-width">
+      <div className="feature-container">
+        <div className="home-heading-background">
+        </div>
+      </div>
+      <div className="primary-content-container">
+
 
                 <section className="first-section">
                     <div className="name">Justin Guevara</div>

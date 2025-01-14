@@ -28,11 +28,41 @@
   }
 }
 
+.feature-container {
+  box-sizing: content-box;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 .home-heading-background {
-    background: url('/i3-min.png') no-repeat center center;
-    height: 180px;
-    margin-bottom: 16px;
-    background-size: auto;
+  background: url('/20250114a-min.png') no-repeat;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .home-heading-background {
+    height: 200px;
+    background-size: 900%;
+    background-position: center center;
+  }
+}
+
+@media screen and (max-width:1024px) and (min-width:481px) {
+  .home-heading-background {
+    height: 200px;
+    background-size: 700%;
+    background-position: center center;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .home-heading-background {
+    height: 533px;
+    background-size: cover;
+    background-position: calc(100% + 266px) center;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -308,18 +338,6 @@ a {
   padding-bottom: 56px
 }
 
-@media (min-width:1025px) {
-  .front-page .primary-content-container {
-    padding-top: 48px
-  }
-}
-
-@media (max-width:1024px) and (min-width:481px) {
-  .front-page .primary-content-container {
-    padding-top: 24px
-  }
-}
-
 .front-page .name {
   line-height: 140%;
   font-weight: 700;
@@ -431,10 +449,6 @@ a {
   .woocommerce .shop-page .primary-content-container ul.products[class*=columns-] li.product.type-product,
   .woocommerce-page .shop-page .primary-content-container ul.products[class*=columns-] li.product.type-product {
     width: 100%
-  }
-
-  .front-page .primary-content-container {
-    padding-top: 16px
   }
 
   .front-page .name {
