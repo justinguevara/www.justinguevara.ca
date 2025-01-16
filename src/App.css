@@ -1,3 +1,56 @@
+@media screen and (max-width: 580px) {
+  .music-player .aux {
+    display: none;
+  }
+}
+.music-page .first-section {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media screen and (max-width: 550px) {
+  .music-page .first-section {
+    width: 100%;
+    display: block;
+  }
+}
+@media screen and (min-width: 551px) {
+  .music-page .first-section {
+    width: 500px;
+  }
+}
+.music-player-current-track-name {
+  padding: 12px;
+  text-align: center;
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.music-player ul, .music-player li {
+  margin: 0;
+  padding: 0;
+}
+.music-player ul {
+  list-style-type: none;
+  border-radius: 15px;
+}
+.music-player li {
+  padding: 10px;
+  background-color: rgb(241, 243, 244);
+  cursor: pointer;
+}
+.music-player li:hover {
+  background-color: rgb(228, 228, 228);
+}
+.music-player {
+  margin-top: 32px;
+}
+.music-player audio {
+  border-radius: 0!important;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
 @media screen and (max-width: 480px) {
   .quotes {
     margin-top: 64px;
@@ -130,7 +183,7 @@ a {
 
 @media (min-width:1200px) {
   .content-width {
-    width: 1200px
+    width: 1180px
   }
 }
 
