@@ -28,7 +28,14 @@
   }
 }
 
+@media screen and (min-width:481px) {
+  .feature-container {
+    margin-top: 8px;
+  }
+}
+
 .feature-container {
+  margin-top: 8px;
   box-sizing: content-box;
   padding-left: 16px;
   padding-right: 16px;
@@ -44,7 +51,7 @@
 @media screen and (max-width: 480px) {
   .home-heading-background {
     height: 200px;
-    background-size: 900%;
+    background-size: 1200%;
     background-position: center center;
   }
 }
@@ -60,8 +67,8 @@
 @media screen and (min-width: 1025px) {
   .home-heading-background {
     height: 533px;
-    background-size: cover;
-    background-position: calc(100% + 266px) center;
+    background-size: 500%;
+    background-position: calc(100% + 1500px) center;
   }
 }
 
@@ -333,6 +340,7 @@ a {
 }
 
 .front-page .primary-content-container {
+  padding-top: 4px;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 56px
@@ -347,9 +355,21 @@ a {
   margin-bottom: 12px
 }
 
-@media (max-width:361px) {
+@media screen and (min-width: 721px) {
   .front-page .name {
-    text-align: center
+    font-size: 52px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  .front-page .name {
+    font-size: 42px
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .front-page .name {
+    font-size: 38px
   }
 }
 
@@ -402,10 +422,6 @@ a {
     padding: 16px
   }
 
-  .front-page .name {
-    font-size: 38px
-  }
-
   .front-page .quotes .quote .content {
     font-size: 22px;
     padding-right: 20%
@@ -449,10 +465,6 @@ a {
   .woocommerce .shop-page .primary-content-container ul.products[class*=columns-] li.product.type-product,
   .woocommerce-page .shop-page .primary-content-container ul.products[class*=columns-] li.product.type-product {
     width: 100%
-  }
-
-  .front-page .name {
-    font-size: 26px
   }
 
   .front-page .quotes .quote .content {
