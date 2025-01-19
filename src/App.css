@@ -13,11 +13,19 @@
     display: block;
   }
 }
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 551px) and (max-width: 1499px) {
+  .music-page .first-section {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1500px) {
   .music-page .first-section {
     width: 500px;
   }
 }
+
 .music-player-current-track-name {
   padding: 12px;
   text-align: center;
