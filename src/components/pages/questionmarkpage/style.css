@@ -1,0 +1,116 @@
+.page-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1199px) {
+    .page-container {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .page-container {
+        width: 1200px;
+    }
+}
+
+.page-content {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    margin-right: auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+    .page-content {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 849px) {
+    .page-content {
+        width: 790px;
+    }
+}
+
+.page-item-alpha-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 2px;
+}
+
+.page-item-alpha-item {
+    width: 150px;
+    height: 250px;
+    box-sizing: border-box;
+}
+
+.page-item-alpha-item-upper-section {
+    height: 165px;
+    position: relative;
+}
+
+.page-item-alpha-item-upper-section-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: content-box;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 12px;
+    background-color: yellow;
+}
+
+.page-item-alpha-item-upper-section-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    box-sizing: content-box;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+    background-color: yellow;
+}
+
+.page-item-alpha-item-lower-section {
+    height: 85px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: cyan;
+    padding: 8px;
+}
+
+.page-item-alpha-item-heading {
+    box-sizing: border-box;
+}
+
+.page-item-alpha-item-subheading {
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+.page-item-alpha-dropdowns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 8px;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.page-item-alpha-dropdowns-count {
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+}
