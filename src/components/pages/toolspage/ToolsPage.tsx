@@ -1,4 +1,5 @@
 import MainNavigation from "components/MainNavigation";
+import EnvironmentService from "services/EnvironmentService";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -15,7 +16,7 @@ export default function ToolsPage (): JSX.Element {
     setIsSubmitting(true);
     setResults(<div>...</div>);
     try {
-      const response = await axios.post('https://localhost:443/api/1/query', {
+      const response = await axios.post(EnvironmentService.getUrlBase() + '/api/1/query', {
         term: term,
         definition: definition,
         query_type: 'evaluate'
@@ -50,7 +51,8 @@ export default function ToolsPage (): JSX.Element {
         <div className="jg-two-column-layout">
           <div className="jg-column jg-column-2-3">
             <h1 className="jg-page-heading">Term Definition Evaluation Tool</h1>
-            <h1 className="jg-subheading">Submit a term, along with its definition. The tool will evaluate the correctness of the definition, according to LLM models, with a series of yes or no answers.</h1>
+            <h1 className="jg-subheading">Submit a term, along with its definition. 
+              The tool will invoke LLM models to evaluate the correctness of the definition, with a series of yes or no answers.</h1>
 
             <form onSubmit={handle_submit}>
               <h2 className="jg-heading">Term</h2>
@@ -59,12 +61,14 @@ export default function ToolsPage (): JSX.Element {
                 className="jg-input jg-mb-1rem"
                 value={term}
                 onChange={(e) => setTerm(e.target.value)}
+                placeholder="Example - Project"
               />
               <h2 className="jg-heading">Definition</h2>
               <textarea
                 className="jg-textarea jg-mb-1rem"
                 value={definition}
                 onChange={(e) => setDefinition(e.target.value)}
+                placeholder="Example - An individual or collaborative enterprise that is carefully planned to achieve a particular aim."
               ></textarea>
               <button type="submit" className="jg-submit-button" disabled={isSubmitting}>
                 {isSubmitting ? '...' : 'Submit'}
