@@ -8,7 +8,7 @@ const music_list: Object = {
         "file_source" : "/sOQZD1gNcon9dWSjqraFCXTRlEh8tkGU.mp3"
     },
     "2" : {
-        "label" : "Harps String Sketch | Forest 1 ",
+        "label" : "Harps Strings Sketch | Forest 1 ",
         "date" : "December 2020",
         "file_source" : "/vVADu43zEgko9YGy1WrbaKZ6BQw0fH5C.mp3"
     },
