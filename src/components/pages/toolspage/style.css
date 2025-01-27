@@ -43,8 +43,8 @@
   height: 10rem;
   padding: 0.5rem;
   border: 1px solid #d1d5db;
-  border-radius: 0.25rem;
   font-family: inherit;
+  resize: none;
 }
 
 .jg-input {
@@ -52,7 +52,6 @@
   padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #d1d5db;
-  border-radius: 0.25rem;
 }
 
 .jg-mb-1rem {
@@ -63,18 +62,27 @@
   margin-top: 1rem;
 }
 
+.jg-mt-2rem {
+  margin-top: 2rem;
+}
+
 .jg-heading {
   margin-bottom: 0.5rem;
   font-size: 12px;
   font-weight: normal;
 }
 
+.jg-subheading {
+  margin-bottom: 2.5rem;
+  font-size: 14px;
+  font-weight: normal;
+}
+
 .jg-submit-button {
   width: 100px;
   padding: 8px;
-  border: 1px solid #d1d5db;
-  border-radius: 0.25rem;
-  background-color: #f9f9f9;
+  border: 0;
+  background-color: #d0d0d0;
   cursor: pointer;
   transition: background-color 0.3s;
   font-size: 12px!important;
@@ -85,10 +93,8 @@
 }
 
 .jg-response-data {
-  margin-top: 1rem;
   padding: 0.5rem;
   border: 1px solid #d1d5db;
-  border-radius: 0.25rem;
   background-color: #f9f9f9;
   height: 200px;
   overflow-y: auto;

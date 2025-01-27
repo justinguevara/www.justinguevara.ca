@@ -47,9 +47,11 @@ export default function ToolsPage (): JSX.Element {
     <>
       <MainNavigation />
       <div className="jg-page-container">
-        <h1 className="jg-page-heading">Term Definition Evaluation Tool</h1>
         <div className="jg-two-column-layout">
           <div className="jg-column jg-column-2-3">
+            <h1 className="jg-page-heading">Term Definition Evaluation Tool</h1>
+            <h1 className="jg-subheading">Submit a term, along with its definition. The tool will evaluate the correctness of the definition, according to LLM models, with a series of yes or no answers.</h1>
+
             <form onSubmit={handle_submit}>
               <h2 className="jg-heading">Term</h2>
               <input
@@ -67,7 +69,9 @@ export default function ToolsPage (): JSX.Element {
               <button type="submit" className="jg-submit-button" disabled={isSubmitting}>
                 {isSubmitting ? '...' : 'Submit'}
               </button>
-              <div className="jg-mt-1rem"></div>
+              <div className="jg-mt-2rem"></div>
+
+              <h2 className="jg-heading">Results</h2>
               <div className="jg-response-data">
                 {results}
               </div>
