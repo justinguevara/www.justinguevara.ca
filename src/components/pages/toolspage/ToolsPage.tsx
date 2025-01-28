@@ -8,13 +8,13 @@ import "./style.css";
 export default function ToolsPage (): JSX.Element {
   const [term, setTerm] = useState('');
   const [definition, setDefinition] = useState('');
-  const [results, setResults] = useState(<div></div>);
+  const [results, setResults] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handle_submit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
-    setResults(<div>...</div>);
+    setResults(['...']);
     try {
       const response = await axios.post(EnvironmentService.getUrlBase() + '/api/1/query', {
         term: term,
@@ -26,17 +26,18 @@ export default function ToolsPage (): JSX.Element {
         }
       });
       const data = response.data;
-      if (typeof (data[0]?.model ?? null) !== 'string') {
+
+      if (typeof (data[0].model ?? null) !== 'string') {
         // @todo
         throw 'error';
       }
-      const processed_elements = data.map((item, index) => (
-        <div key={index}>{(item.model ?? '').toLowerCase()} - {(item.content ?? '').toLowerCase()}</div>
-      ));
+      const processed_elements = data.map(function (item, index) {
+        return `${item.model ?? 'Unknown model'} - ${(item.response?.content?.answer ?? 'error').toLowerCase()}`;
+      });
 
       setResults(processed_elements);
     } catch (error) {
-      setResults(<div>'error'</div>);
+      setResults(['error']);
     } finally {
       setTimeout(() => {
         setIsSubmitting(false);
@@ -59,6 +60,7 @@ export default function ToolsPage (): JSX.Element {
 
             <form onSubmit={handle_submit}>
               <h2 className="jg-heading">Term</h2>
+              {/* @todo context, prompt, noun vs verb */}
               <input
                 type="text"
                 className="jg-input jg-mb-1rem"
@@ -80,7 +82,9 @@ export default function ToolsPage (): JSX.Element {
 
               <h2 className="jg-heading">Results</h2>
               <div className="jg-response-data">
-                {results}
+                {results.map(function (item, index) {
+                  return (<div key={index}>{item}</div>);
+                })}
               </div>
             </form>
           </div>

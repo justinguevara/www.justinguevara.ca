@@ -136,10 +136,6 @@
 }
 
 .jg-under-construction {
-  background-color: red;
-  color: white;
+  color: red;
   font-weight: bold;
-  padding: 5px;
-  text-align: center;
-  width: 160px;
 }
