@@ -134,3 +134,12 @@
     font-size: 1rem;
     font-weight: bold;
 }
+
+.jg-under-construction {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  width: 160px;
+}

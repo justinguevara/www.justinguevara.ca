@@ -50,6 +50,9 @@ export default function ToolsPage (): JSX.Element {
       <div className="jg-page-container">
         <div className="jg-two-column-layout">
           <div className="jg-column jg-column-2-3">
+            <div className="jg-mt-2rem"></div>
+            <div className="jg-under-construction">In Development</div>
+            <div className="jg-mt-2rem"></div>
             <h1 className="jg-page-heading">Term Definition Evaluation Tool</h1>
             <h1 className="jg-subheading">Submit a term, along with its definition. 
               The tool will invoke LLM models to evaluate the correctness of the definition, with a series of yes or no answers.</h1>
