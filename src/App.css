@@ -73,7 +73,7 @@
 
 @media screen and (min-width: 1025px) {
   .quotes {
-    margin-top: 98px;
+    margin-top: 96px;
   }
 }
 
@@ -103,7 +103,7 @@
 }
 
 .home-heading-background {
-  background: url('/20250114a-min.png') no-repeat;
+  background: url('/feb1b-min.png') no-repeat;
   margin-bottom: 16px;
   margin-left: auto;
   margin-right: auto;
@@ -112,7 +112,7 @@
 @media screen and (max-width: 480px) {
   .home-heading-background {
     height: 200px;
-    background-size: 1200%;
+    background-size: 1400px;
     background-position: center center;
   }
 }
@@ -120,16 +120,16 @@
 @media screen and (max-width:1024px) and (min-width:481px) {
   .home-heading-background {
     height: 200px;
-    background-size: 700%;
-    background-position: center center;
+    background-size: 1525px;
+    background-position: left top;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .home-heading-background {
     height: 533px;
-    background-size: 500%;
-    background-position: calc(100% + 1500px) center;
+    background-size: 1725px;
+    background-position: left top;
   }
 }
 
@@ -599,5 +599,8 @@ a {
 
 .woocommerce .woocommerce-message a {
   text-decoration: underline;
-  font-weight: 500
+  font-weight: 500;
+}
+.short-description .bold {
+  font-weight: 600 !important;
 }
