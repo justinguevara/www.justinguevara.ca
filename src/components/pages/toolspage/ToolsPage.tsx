@@ -3,7 +3,7 @@ import EnvironmentService from "services/EnvironmentService";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import "./style.css";
+import styles from "./style.module.css";
 
 export default function ToolsPage (): JSX.Element {
   const [term, setTerm] = useState('');
@@ -37,7 +37,7 @@ export default function ToolsPage (): JSX.Element {
 
       setResults(processed_elements);
     } catch (error) {
-      setResults(['error']);
+      setResults(['Error - request failed.']);
     } finally {
       setTimeout(() => {
         setIsSubmitting(false);
@@ -46,52 +46,55 @@ export default function ToolsPage (): JSX.Element {
   };
 
   return (
-    <>
-      <MainNavigation />
-      <div className="jg-page-container">
-        <div className="jg-two-column-layout">
-          <div className="jg-column jg-column-2-3">
-            <div className="jg-mt-2rem"></div>
-            <div className="jg-under-construction">In Development</div>
-            <div className="jg-mt-2rem"></div>
-            <h1 className="jg-page-heading">Term Definition Evaluation Tool</h1>
-            <h1 className="jg-subheading">Submit a term, along with its definition. 
-              The tool will invoke LLM models to evaluate the correctness of the definition, with a series of yes or no answers.</h1>
-
+    <div className={`${styles['jg-page-wrapper']}`}>
+      {/* <MainNavigation /> */}
+      <div className={`${styles['jg-page-container']} ${styles['jg-margin-bottom-96-collapse']}`}>
+        <div className={styles['jg-two-column-layout']}>
+          <div className={`${styles['jg-column']} ${styles['jg-column-2-3']}`}>
+            <h1 className={`${styles['jg-page-heading']} ${styles['jg-margin-top-96-collapse']}`}>Term Definition Evaluation Tool</h1>
+            <div className={`${styles['jg-padding-single-intent-collapse']} ${styles['jg-width-66-collapse']}`}>
+              Submit a term, along with its definition. 
+              The tool will invoke LLM models to evaluate the correctness of the definition, with a series of yes or no answers.
+            </div>
             <form onSubmit={handle_submit}>
-              <h2 className="jg-heading">Term</h2>
-              {/* @todo context, prompt, noun vs verb */}
+              <div className={`${styles['jg-padding-8-collapse']} ${styles['jg-width-66-collapse']}`}>
+                <h2 className={`${styles['jg-margin-top-50']} ${styles['jg-overflow-hidden']}`}>Term</h2>
+              </div>
               <input
                 type="text"
-                className="jg-input jg-mb-1rem"
+                className={`${styles['jg-input']} ${styles['jg-mb-1rem']} ${styles['jg-width-66-collapse']}`}
                 value={term}
                 onChange={(e) => setTerm(e.target.value)}
                 placeholder="Example - Project"
               />
-              <h2 className="jg-heading">Definition</h2>
+              <div className={`${styles['jg-padding-8-collapse']} ${styles['jg-width-66-collapse']}`}>
+                <h2 className={styles['jg-overflow-hidden']}>Definition</h2>
+              </div>
               <textarea
-                className="jg-textarea jg-mb-1rem"
+                className={`${styles['jg-textarea']} ${styles['jg-mb-1rem']} ${styles['jg-width-66-collapse']}`}
                 value={definition}
                 onChange={(e) => setDefinition(e.target.value)}
                 placeholder="Example - An individual or collaborative enterprise that is carefully planned to achieve a particular aim."
               ></textarea>
-              <button type="submit" className="jg-submit-button" disabled={isSubmitting}>
+              <button type="submit" className={styles['jg-submit-button']} disabled={isSubmitting}>
                 {isSubmitting ? '...' : 'Submit'}
               </button>
-              <div className="jg-mt-2rem"></div>
+              <div className={styles['jg-mt-2rem']}></div>
 
-              <h2 className="jg-heading">Results</h2>
-              <div className="jg-response-data">
+              <div className={styles['jg-padding-8-collapse']}>
+                <h2 className={styles['jg-overflow-hidden']}>Results</h2>
+              </div>
+              <div className={styles['jg-response-data']}>
                 {results.map(function (item, index) {
                   return (<div key={index}>{item}</div>);
                 })}
               </div>
             </form>
           </div>
-          <div className="jg-column jg-column-1-3">
+          <div className={`${styles['jg-column']} ${styles['jg-column-1-3']}`}>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

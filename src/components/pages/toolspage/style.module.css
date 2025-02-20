@@ -1,0 +1,283 @@
+.jg-page-wrapper {
+  flex-grow: 1;
+}
+
+.jg-page-wrapper,
+.jg-page-wrapper textarea,
+.jg-page-wrapper input,
+.jg-page-wrapper .jg-response-data, 
+.jg-page-wrapper button {
+  background-color:rgb(0,4,39);
+  font-size: 11px;
+  color:rgb(36, 216, 170);
+  text-transform: uppercase;
+  font-family: monospace;
+  line-height: 1.5em;
+  letter-spacing: 0;
+}
+
+.jg-page-wrapper textarea,
+.jg-page-wrapper input,
+.jg-page-wrapper .jg-response-data, 
+.jg-page-wrapper button {
+  border-color:white;
+  outline: none;
+  box-shadow: none;
+}
+
+.jg-page-wrapper textarea,
+.jg-page-wrapper input,
+.jg-page-wrapper .jg-response-data {
+  text-transform: none;
+  color:rgb(180,180,180);
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.jg-page-wrapper textarea:focus,
+.jg-page-wrapper input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: rgb(180,180,180);
+}
+
+.jg-page-wrapper input::placeholder,
+.jg-page-wrapper textarea::placeholder {
+  color: #888888;
+}
+
+::-webkit-scrollbar-thumb, .jg-page-wrapper textarea::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar-thumb, .jg-page-wrapper textarea::-webkit-scrollbar-track {
+  background: none;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar-thumb, .jg-page-wrapper textarea::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border: 0;
+  background-color: #DDD;
+  outline: none;
+  box-shadow: none;
+}
+
+.jg-page-wrapper button {
+  border-style: solid;
+  border-color: rgb(36,216,170);
+  border-width: 1px;
+  cursor: pointer;
+  display: block;
+  transition: all 0.1s ease-in-out;
+  width: 100px;
+  padding: 8px;
+}
+.jg-page-wrapper button:hover {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.jg-page-wrapper .jg-page-heading {
+  background-color: rgb(0,105,108);
+  font-size: 11px;
+  padding: 8px;
+  margin-bottom: 1rem;
+}
+
+.jg-page-wrapper h2 {
+  margin-bottom: 0.5rem;
+  font-size: 11px;
+}
+
+.jg-page-wrapper h2::after {
+  position: relative;
+  left: 10px;
+  top: 2px;
+  content: "********************************************************************************************************************************************************************************************************************************************************************";
+}
+
+.jg-page-wrapper .jg-overflow-hidden {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .jg-page-wrapper .jg-width-66-collapse {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .jg-page-wrapper .jg-width-66-collapse {
+    width: 66% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .jg-page-wrapper .jg-margin-top-96-collapse {
+    margin-top: 96px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .jg-page-wrapper .jg-margin-top-96-collapse {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .jg-page-wrapper .jg-margin-bottom-96-collapse {
+    margin-bottom: 96px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .jg-page-wrapper .jg-margin-bottom-96-collapse {
+    margin-bottom: 16px;
+  }
+}
+
+.jg-page-wrapper .jg-margin-top-50 {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 850px) {
+  .jg-page-wrapper .jg-padding-8-collapse {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 851px) {
+  .jg-page-wrapper .jg-padding-8-collapse {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .jg-page-wrapper .jg-padding-single-intent-collapse {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (min-width: 851px) {
+  .jg-page-wrapper .jg-padding-single-intent-collapse {
+    padding-left: 16px;
+  }
+}
+
+.jg-page-wrapper .header-menu-primary{
+  display: none;
+}
+
+.jg-page-wrapper .jg-page-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1200px) {
+  .jg-page-wrapper .jg-page-container {
+    width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .jg-page-wrapper .jg-page-container {
+    width: 100%;
+  }
+}
+
+.jg-page-wrapper .jg-page-content {
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  .jg-page-wrapper .jg-page-content {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 851px) {
+  .jg-page-wrapper .jg-page-content {
+    width: 790px;
+  }
+}
+
+.jg-page-wrapper .jg-textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-family: inherit;
+  resize: none;
+}
+
+.jg-page-wrapper .jg-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+}
+
+.jg-page-wrapper .jg-mb-1rem {
+  margin-bottom: 1rem;
+}
+
+.jg-page-wrapper .jg-mt-1rem {
+  margin-top: 1rem;
+}
+
+.jg-page-wrapper .jg-mt-2rem {
+  margin-top: 2rem;
+}
+
+.jg-page-wrapper .jg-response-data {
+  border: 1px solid;
+  height: 200px;
+  overflow-y: auto;
+}
+
+.jg-page-wrapper .jg-two-column-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.jg-page-wrapper .jg-column {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1025px) {
+  .jg-page-wrapper .jg-column-2-3 {
+    width: 66.67%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .jg-page-wrapper .jg-column-1-3 {
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .jg-page-wrapper .jg-column-2-3,
+  .jg-page-wrapper .jg-column-1-3 {
+    width: 100%;
+  }
+}
