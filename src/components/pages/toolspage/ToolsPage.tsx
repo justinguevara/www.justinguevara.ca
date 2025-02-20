@@ -2,8 +2,8 @@ import MainNavigation from "components/MainNavigation";
 import EnvironmentService from "services/EnvironmentService";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
 import styles from "./style.module.css";
+import "./navigation.css"; // override  navigation styles
 
 export default function ToolsPage (): JSX.Element {
   const [term, setTerm] = useState('');
@@ -46,19 +46,19 @@ export default function ToolsPage (): JSX.Element {
   };
 
   return (
-    <div className={`${styles['jg-page-wrapper']}`}>
-      {/* <MainNavigation /> */}
+    <div id='jg-tools-page' className={`${styles['jg-page-wrapper']}`}>
+      <MainNavigation />
       <div className={`${styles['jg-page-container']} ${styles['jg-margin-bottom-96-collapse']}`}>
         <div className={styles['jg-two-column-layout']}>
           <div className={`${styles['jg-column']} ${styles['jg-column-2-3']}`}>
-            <h1 className={`${styles['jg-page-heading']} ${styles['jg-margin-top-96-collapse']}`}>Term Definition Evaluation Tool</h1>
-            <div className={`${styles['jg-padding-single-intent-collapse']} ${styles['jg-width-66-collapse']}`}>
+            <h1 className={`${styles['jg-page-heading']} ${styles['jg-margin-top-96-collapse']}`}>Term Definition Evaluation</h1>
+            <div className={`${styles['jg-padding-single-indent-collapse']} ${styles['jg-width-66-collapse']}`}>
               Submit a term, along with its definition. 
-              The tool will invoke LLM models to evaluate the correctness of the definition, with a series of yes or no answers.
+              The tool will invoke LLM models to evaluate the correctness of the definition.
             </div>
             <form onSubmit={handle_submit}>
               <div className={`${styles['jg-padding-8-collapse']} ${styles['jg-width-66-collapse']}`}>
-                <h2 className={`${styles['jg-margin-top-50']} ${styles['jg-overflow-hidden']}`}>Term</h2>
+                <h2 className={`${styles['jg-margin-top-50']} ${styles['jg-overflow-hidden']} ${styles['js-asterix-decorate']}`}>Term</h2>
               </div>
               <input
                 type="text"
@@ -68,7 +68,7 @@ export default function ToolsPage (): JSX.Element {
                 placeholder="Example - Project"
               />
               <div className={`${styles['jg-padding-8-collapse']} ${styles['jg-width-66-collapse']}`}>
-                <h2 className={styles['jg-overflow-hidden']}>Definition</h2>
+                <h2 className={`${styles['jg-overflow-hidden']} ${styles['js-asterix-decorate']}`}>Definition</h2>
               </div>
               <textarea
                 className={`${styles['jg-textarea']} ${styles['jg-mb-1rem']} ${styles['jg-width-66-collapse']}`}

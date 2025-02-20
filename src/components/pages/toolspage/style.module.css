@@ -99,12 +99,16 @@
   font-size: 11px;
 }
 
-.jg-page-wrapper h2::after {
+/*
+not needed?
+
+.jg-page-wrapper h2.js-asterix-decorate::after {
   position: relative;
   left: 10px;
   top: 2px;
   content: "********************************************************************************************************************************************************************************************************************************************************************";
 }
+*/
 
 .jg-page-wrapper .jg-overflow-hidden {
   overflow: hidden;
@@ -163,14 +167,14 @@
 }
 
 @media screen and (max-width: 850px) {
-  .jg-page-wrapper .jg-padding-single-intent-collapse {
+  .jg-page-wrapper .jg-padding-single-indent-collapse {
     padding-left: 0px;
   }
 }
 
 @media screen and (min-width: 851px) {
-  .jg-page-wrapper .jg-padding-single-intent-collapse {
-    padding-left: 16px;
+  .jg-page-wrapper .jg-padding-single-indent-collapse {
+    padding-left: 8px;
   }
 }
 
