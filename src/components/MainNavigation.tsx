@@ -1,20 +1,28 @@
 import { Link } from 'react-router-dom';
+import { useState } from "react";
 
-function MainNavigation (): JSX.Element {
+function MainNavigation ({root_class = 'default'}): JSX.Element {
+  const [show_mobile_menu, setShowMobileMenu] = useState(false);
+
+  const  navigation_items_container_classes = ['header-menu-primary'];
+  if (show_mobile_menu === false) {
+    navigation_items_container_classes.push('hide');
+  }
+
   return (
-    <header className="secondary-font header-primary">
-        <nav>
-        <div className="mobile-menu-bar"><span className="dashicons dashicons-menu" id="open-menu-button"></span></div>
-        <div className="header-menu-primary" id="header-navigation">
-            <ul className="menu" id="menu-menu-1">
-                {<li className="menu-item menu-item-home menu-item-object-custom menu-item-type-custom"><Link to="/tools">Tools</Link></li>}
-                {/*<li className="menu-item menu-item-home menu-item-object-custom menu-item-type-custom"><Link to="/q">?</Link></li>*/}
-                <li className="menu-item menu-item-home menu-item-object-custom menu-item-type-custom"><Link to="/music">2021</Link></li>
-                <li className="menu-item menu-item-home menu-item-object-custom menu-item-type-custom"><Link to="/about">About</Link></li>
-                <li className="menu-item menu-item-home menu-item-object-custom menu-item-type-custom"><Link to="/">Home</Link></li>
-            </ul>
+    <header className={`secondary-font header-primary ${root_class}`}>
+      <nav>
+        <div class="jg-menu-icon" onClick={function () { setShowMobileMenu(!show_mobile_menu) }}></div>
+        <div className={navigation_items_container_classes.join(" ")} id="header-navigation">
+          <ul className="menu" id="menu-menu-1">
+            <li className="menu-item"><Link to="/tools">Tools</Link></li>
+            {/*<li className="menu-item"><Link to="/q">?</Link></li>*/}
+            <li className="menu-item"><Link to="/music">2021</Link></li>
+            <li className="menu-item"><Link to="/about">About</Link></li>
+            <li className="menu-item"><Link to="/">Home</Link></li>
+          </ul>
         </div>
-        </nav>
+      </nav>
     </header>
   );
 };

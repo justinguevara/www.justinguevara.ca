@@ -4,9 +4,7 @@ function HomePage (): JSX.Element {
   return (
     <>
       <MainNavigation />
-      <div className="temp"></div>
       <div className="front-page">
-
         <div className="center-block-element content-width">
           <div className="feature-container">
             <div className="home-heading-background">

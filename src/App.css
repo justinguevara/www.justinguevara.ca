@@ -83,18 +83,6 @@ html, body, #root {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .temp {
-    height: 16px;
-  }
-}
-
-@media screen and (min-width: 481px) {
-  .temp {
-    display: none;
-  }
-}
-
 @media screen and (min-width:481px) {
   .feature-container {
     margin-top: 8px;
@@ -139,9 +127,64 @@ html, body, #root {
   }
 }
 
+.default.header-primary > nav {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 480px) {
+  .default.header-primary {
+    padding: 4px 12px 0px 12px;
+  }
+
   .header-primary {
-    min-height: 1.5em
+    min-height: 1.5em;
+  }
+
+  .default .header-menu-primary.hide{
+    display: none;
+  }
+
+  .default #header-navigation {
+    width: 100%;
+    position: relative;
+  }
+
+  .default #menu-menu-1 {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    height: 100vh;
+    background-color: white;
+    opacity: 0.95;
+  }
+
+  .default #menu-menu-1 .menu-item {
+    display: block;
+    background-color:white;
+    padding: 0; 
+    text-align: center;
+  }
+
+  .default #menu-menu-1 .menu-item:hover {
+    opacity: 1;
+    background-color: rgb(230, 230, 230);
+  }
+
+  .default .jg-menu-icon::after {
+    display: inline-block;
+    content: "...";
+    padding: 10px;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: monospace;
+  }
+
+  .default .jg-menu-icon:hover::after {
+    opacity: 0.6;
   }
 }
 
@@ -515,17 +558,6 @@ a {
     display: block;
     padding-top: 10px;
     padding-bottom: 10px
-  }
-
-  #header-navigation {
-    display: none
-  }
-
-  #header-navigation.visible {
-    display: block;
-    position: absolute;
-    z-index: 99;
-    width: 100%
   }
 
   .woocommerce .shop-page .primary-content-container ul.products[class*=columns-] li.product.type-product,

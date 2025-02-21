@@ -47,7 +47,7 @@ export default function ToolsPage (): JSX.Element {
 
   return (
     <div id='jg-tools-page' className={`${styles['jg-page-wrapper']}`}>
-      <MainNavigation />
+      <MainNavigation root_class="tools-page" />
       <div className={`${styles['jg-page-container']} ${styles['jg-margin-bottom-96-collapse']}`}>
         <div className={styles['jg-two-column-layout']}>
           <div className={`${styles['jg-column']} ${styles['jg-column-2-3']}`}>
