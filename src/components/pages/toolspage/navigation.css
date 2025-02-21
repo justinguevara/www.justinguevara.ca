@@ -16,6 +16,9 @@
     height: 150vh;
     position: fixed;
     opacity: 0.85;
+    padding: 0;
+    top: 0;
+    left: 0;
     content: "";
     overflow: hidden;
   }
@@ -30,7 +33,7 @@
   }
 
   #jg-tools-page #menu-menu-1 {
-    z-index: 10;
+    z-index: 11;
     position: absolute;
     top: 16px;
     left: 0;
@@ -57,6 +60,10 @@
     background-color: rgb(170, 170, 170);
   }
 
+  #jg-tools-page .jg-menu-icon {
+    z-index: 11;
+  }
+
   #jg-tools-page .jg-menu-icon::after {
     display: inline-block;
     content: "...";
@@ -67,7 +74,6 @@
     padding: 10px;
     cursor: pointer;
     font-size: 20px;
-    z-index: 11;
   }
 
   #jg-tools-page .jg-menu-icon:hover::after {
