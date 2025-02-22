@@ -8,10 +8,26 @@ import { useState } from "react";
 export default function ToolsPage (): JSX.Element {
   const [selected_option, setSelectedOption] = useState('');
   const [selected_tool, setSelectedTool] = useState(tools_list.generate_strings.id);
+  const [show_mobile_secondary_menu, setShowMobileSecondaryMenu] = useState(false);
+
+  const show_mobile_menu_class = show_mobile_secondary_menu ? 'jg-show' : 'jg-hide';
+
+  const handleSecondaryMenuIconClick = function () {
+    setShowMobileSecondaryMenu(!show_mobile_secondary_menu);
+  };
 
   const on_secondary_menu_item_click = function (event: React.MouseEvent<HTMLDivElement>) {
+    setShowMobileSecondaryMenu(false);
     setSelectedTool(event.currentTarget.getAttribute('data-tool-id'));
   };
+
+  // temp placeholder
+  for (let i = 0; i < 25; i++) {
+    tools_list[i] = {
+      "id" : i,
+      "label" : i
+    };
+  }
 
   const secondary_menu_html = Object.keys(tools_list).map(function (key) {
     return (
@@ -36,8 +52,13 @@ export default function ToolsPage (): JSX.Element {
     <div id='jg-tools-page' className={`${styles['jg-page-wrapper']} ${styles['jg-tools-page']}`}>
       <MainNavigation root_class="tools-page" />
 
-      <div className={`${styles['jg-secondary-menu']}`}>
-        {secondary_menu_html}
+      <div className={`${styles['jg-secondary-menu']} ${styles[show_mobile_menu_class]}`}>
+        <div className={`${styles['jg-mobile-menu-icon']}`} onClick={handleSecondaryMenuIconClick}>Open tools menu</div>
+        <div className={`${styles['jg-secondary-menu-item-container-anchor']}`}>
+          <div className={`${styles['jg-secondary-menu-item-container']}`}>
+            {secondary_menu_html}
+          </div>
+        </div>
       </div>
 
       <div className={`${styles['jg-term-evaluation-tool-wrapper']}`}>
