@@ -45,13 +45,13 @@ function About (): JSX.Element {
               <p>
                 During the early 2020's, one of my hobbies was composing music using FL Studio.
               </p>
-              <p>
+              <div>
                 Some of the tools used include:
                 <ul>
                   <li>VSTs: PianoTeq, EastWest Hollywood Strings, Spitfire Audio Harp</li>
                   <li>Keyboard Controllers: M-Audio Hammer 88, M-Audio Keystation 49 MK3</li>
                 </ul>
-              </p>
+              </div>
               <div className="music-player">
                 {trackListJsx}
                 <div className="music-player-current-track-name">{current_track.label}</div>

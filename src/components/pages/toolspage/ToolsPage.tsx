@@ -21,14 +21,6 @@ export default function ToolsPage (): JSX.Element {
     setSelectedTool(event.currentTarget.getAttribute('data-tool-id'));
   };
 
-  // temp placeholder
-  for (let i = 0; i < 25; i++) {
-    tools_list[i] = {
-      "id" : i,
-      "label" : i
-    };
-  }
-
   const secondary_menu_html = Object.keys(tools_list).map(function (key) {
     return (
       <div
