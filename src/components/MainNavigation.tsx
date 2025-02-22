@@ -12,7 +12,7 @@ function MainNavigation ({root_class = 'default'}): JSX.Element {
   return (
     <header className={`secondary-font header-primary ${root_class}`}>
       <nav>
-        <div class="jg-menu-icon" onClick={function () { setShowMobileMenu(!show_mobile_menu) }}></div>
+        <div className="jg-menu-icon" onClick={function () { setShowMobileMenu(!show_mobile_menu) }}></div>
         <div className={navigation_items_container_classes.join(" ")} id="header-navigation">
           <ul className="menu" id="menu-menu-1">
             <li className="menu-item"><Link to="/tools">Tools</Link></li>

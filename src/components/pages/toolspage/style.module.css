@@ -1,12 +1,12 @@
-.jg-page-wrapper {
+.jg-tools-page {
   flex-grow: 1;
 }
 
-.jg-page-wrapper,
-.jg-page-wrapper textarea,
-.jg-page-wrapper input,
-.jg-page-wrapper .jg-response-data, 
-.jg-page-wrapper button {
+.jg-tools-page,
+.jg-tools-page textarea,
+.jg-tools-page input,
+.jg-tools-page .jg-response-data, 
+.jg-tools-page button {
   background-color:rgb(0,4,39);
   font-size: 11px;
   color:rgb(36, 216, 170);
@@ -16,37 +16,37 @@
   letter-spacing: 0;
 }
 
-.jg-page-wrapper textarea,
-.jg-page-wrapper input,
-.jg-page-wrapper .jg-response-data, 
-.jg-page-wrapper button {
+.jg-tools-page textarea,
+.jg-tools-page input,
+.jg-tools-page .jg-response-data, 
+.jg-tools-page button {
   border-color:white;
   outline: none;
   box-shadow: none;
 }
 
-.jg-page-wrapper textarea,
-.jg-page-wrapper input,
-.jg-page-wrapper .jg-response-data {
+.jg-tools-page textarea,
+.jg-tools-page input,
+.jg-tools-page .jg-response-data {
   text-transform: none;
   color:rgb(180,180,180);
   box-sizing: border-box;
   padding: 8px;
 }
 
-.jg-page-wrapper textarea:focus,
-.jg-page-wrapper input:focus {
+.jg-tools-page textarea:focus,
+.jg-tools-page input:focus {
   outline: none;
   box-shadow: none;
   border-color: rgb(180,180,180);
 }
 
-.jg-page-wrapper input::placeholder,
-.jg-page-wrapper textarea::placeholder {
+.jg-tools-page input::placeholder,
+.jg-tools-page textarea::placeholder {
   color: #888888;
 }
 
-::-webkit-scrollbar-thumb, .jg-page-wrapper textarea::-webkit-scrollbar {
+::-webkit-scrollbar-thumb, .jg-tools-page textarea::-webkit-scrollbar {
   width: 12px;
   height: 12px;
   border: 0;
@@ -55,7 +55,7 @@
   box-shadow: none;
 }
 
-::-webkit-scrollbar-thumb, .jg-page-wrapper textarea::-webkit-scrollbar-track {
+::-webkit-scrollbar-thumb, .jg-tools-page textarea::-webkit-scrollbar-track {
   background: none;
   cursor: pointer;
   border: 0;
@@ -63,7 +63,7 @@
   box-shadow: none;
 }
 
-::-webkit-scrollbar-thumb, .jg-page-wrapper textarea::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb, .jg-tools-page textarea::-webkit-scrollbar-thumb {
   cursor: pointer;
   border: 0;
   background-color: #DDD;
@@ -71,7 +71,7 @@
   box-shadow: none;
 }
 
-.jg-page-wrapper button {
+.jg-tools-page button {
   border-style: solid;
   border-color: rgb(36,216,170);
   border-width: 1px;
@@ -81,20 +81,20 @@
   width: 100px;
   padding: 8px;
 }
-.jg-page-wrapper button:hover {
+.jg-tools-page button:hover {
   background-color: transparent;
   border-color: white;
   color: white;
 }
 
-.jg-page-wrapper .jg-page-heading {
+.jg-tools-page .jg-page-heading {
   background-color: rgb(0,105,108);
   font-size: 11px;
   padding: 8px;
   margin-bottom: 1rem;
 }
 
-.jg-page-wrapper h2 {
+.jg-tools-page h2 {
   margin-bottom: 0.5rem;
   font-size: 11px;
 }
@@ -102,7 +102,7 @@
 /*
 not needed?
 
-.jg-page-wrapper h2.js-asterix-decorate::after {
+.jg-tools-page h2.js-asterix-decorate::after {
   position: relative;
   left: 10px;
   top: 2px;
@@ -110,79 +110,79 @@ not needed?
 }
 */
 
-.jg-page-wrapper .jg-overflow-hidden {
+.jg-tools-page .jg-overflow-hidden {
   overflow: hidden;
 }
 
 @media screen and (max-width: 1024px) {
-  .jg-page-wrapper .jg-width-66-collapse {
+  .jg-tools-page .jg-width-66-collapse {
     width: 100%;
   }
 }
 @media screen and (min-width: 1025px) {
-  .jg-page-wrapper .jg-width-66-collapse {
+  .jg-tools-page .jg-width-66-collapse {
     width: 66% !important;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .jg-page-wrapper .jg-margin-top-96-collapse {
-    margin-top: 96px;
+  .jg-tools-page .jg-content-margin-top {
+    margin-top: 50px;
   }
 }
 
 @media screen and (max-width: 1025px) {
-  .jg-page-wrapper .jg-margin-top-96-collapse {
+  .jg-tools-page .jg-content-margin-top {
     margin-top: 8px;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .jg-page-wrapper .jg-margin-bottom-96-collapse {
+  .jg-tools-page .jg-margin-bottom-96-collapse {
     margin-bottom: 96px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .jg-page-wrapper .jg-margin-bottom-96-collapse {
+  .jg-tools-page .jg-margin-bottom-96-collapse {
     margin-bottom: 16px;
   }
 }
 
-.jg-page-wrapper .jg-margin-top-50 {
+.jg-tools-page .jg-margin-top-50 {
   margin-top: 50px;
 }
 
 @media screen and (max-width: 850px) {
-  .jg-page-wrapper .jg-padding-8-collapse {
+  .jg-tools-page .jg-padding-8-collapse {
     padding-top: 8px;
     padding-bottom: 8px;
   }
 }
 
 @media screen and (min-width: 851px) {
-  .jg-page-wrapper .jg-padding-8-collapse {
+  .jg-tools-page .jg-padding-8-collapse {
     padding: 8px;
   }
 }
 
 @media screen and (max-width: 850px) {
-  .jg-page-wrapper .jg-padding-single-indent-collapse {
+  .jg-tools-page .jg-padding-single-indent-collapse {
     padding-left: 0px;
   }
 }
 
 @media screen and (min-width: 851px) {
-  .jg-page-wrapper .jg-padding-single-indent-collapse {
+  .jg-tools-page .jg-padding-single-indent-collapse {
     padding-left: 8px;
   }
 }
 
-.jg-page-wrapper .header-menu-primary{
+.jg-tools-page .header-menu-primary{
   display: none;
 }
 
-.jg-page-wrapper .jg-page-container {
+.jg-tools-page .jg-page-container {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
@@ -192,18 +192,18 @@ not needed?
 }
 
 @media screen and (min-width: 1200px) {
-  .jg-page-wrapper .jg-page-container {
+  .jg-tools-page .jg-page-container {
     width: 1200px;
   }
 }
 
 @media screen and (max-width: 1199px) {
-  .jg-page-wrapper .jg-page-container {
+  .jg-tools-page .jg-page-container {
     width: 100%;
   }
 }
 
-.jg-page-wrapper .jg-page-content {
+.jg-tools-page .jg-page-content {
   padding-left: 16px;
   padding-right: 16px;
   box-sizing: border-box;
@@ -212,18 +212,18 @@ not needed?
 }
 
 @media screen and (max-width: 850px) {
-  .jg-page-wrapper .jg-page-content {
+  .jg-tools-page .jg-page-content {
     width: 100%;
   }
 }
 
 @media screen and (min-width: 851px) {
-  .jg-page-wrapper .jg-page-content {
+  .jg-tools-page .jg-page-content {
     width: 790px;
   }
 }
 
-.jg-page-wrapper .jg-textarea {
+.jg-tools-page .jg-textarea {
   width: 100%;
   height: 10rem;
   padding: 0.5rem;
@@ -232,56 +232,204 @@ not needed?
   resize: none;
 }
 
-.jg-page-wrapper .jg-input {
+.jg-tools-page .jg-input {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #d1d5db;
 }
 
-.jg-page-wrapper .jg-mb-1rem {
+.jg-tools-page .jg-mb-1rem {
   margin-bottom: 1rem;
 }
 
-.jg-page-wrapper .jg-mt-1rem {
+.jg-tools-page .jg-mt-1rem {
   margin-top: 1rem;
 }
 
-.jg-page-wrapper .jg-mt-2rem {
+.jg-tools-page .jg-mt-2rem {
   margin-top: 2rem;
 }
 
-.jg-page-wrapper .jg-response-data {
+.jg-tools-page .jg-response-data {
   border: 1px solid;
   height: 200px;
   overflow-y: auto;
 }
 
-.jg-page-wrapper .jg-two-column-layout {
+.jg-tools-page .jg-two-column-layout {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 }
 
-.jg-page-wrapper .jg-column {
+.jg-tools-page .jg-column {
   box-sizing: border-box;
 }
 
 @media screen and (min-width: 1025px) {
-  .jg-page-wrapper .jg-column-2-3 {
+  .jg-tools-page .jg-column-2-3 {
     width: 66.67%;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .jg-page-wrapper .jg-column-1-3 {
+  .jg-tools-page .jg-column-1-3 {
     width: 33.33%;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .jg-page-wrapper .jg-column-2-3,
-  .jg-page-wrapper .jg-column-1-3 {
+  .jg-tools-page .jg-column-2-3,
+  .jg-tools-page .jg-column-1-3 {
     width: 100%;
+  }
+}
+
+/*
+** secondary menu
+** 
+**
+*/
+
+/* temp until mobile dropdown implemented */
+@media screen and (max-width: 550px) {
+  .jg-tools-page .jg-secondary-menu {
+    display: none !important;
+  }
+}
+
+.jg-tools-page .jg-secondary-menu {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0px 16px 12px 16px;
+  justify-content: flex-end;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: no-wrap; 
+}
+
+.jg-tools-page .jg-menu-item {
+  padding: 2px 50px 2px 50px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color:  rgb(100, 100, 100);
+  color: rgb(0, 4, 39);
+  overflow: hidden;
+  white-space: nowrap;
+  height: 23px;
+  display: flex;
+  align-items: center;
+}
+
+.jg-tools-page .jg-menu-item:hover {
+  background-color:  rgb(180, 180, 180);
+}
+
+.jg-tools-page .jg-menu-item > span:before {
+  font-size: 10px;
+  opacity: 0.2;
+  text-transform: uppercase;
+  content: "\00A0\00A0";
+  counter-increment: menu-item;
+}
+
+.jg-tools-page .jg-menu-item > span:after {
+  font-size: 10px;
+  opacity: 0.2;
+  text-transform: uppercase;
+  content: "\00A0\00A0";
+}
+
+/*
+**
+** 
+**
+*/
+
+.jg-generate-strings-tool .jg-inline-input {
+  border: 0;
+  cursor: text;
+}
+
+.jg-generate-strings-tool .jg-output {
+  min-height: 24em;
+  max-height: 49em;
+  width: 100%;
+  text-transform: none;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: rgb(36,216,170);
+  border-width: 1px;
+  padding: 8px;
+  overflow: auto;
+  color: rgb(36, 216, 170);
+}
+
+.jg-generate-strings-tool .jg-options {
+  display: flex;
+  padding-top: 12px;
+}
+
+@media screen and (max-width: 1115px) {
+  .jg-generate-strings-tool .jg-options {
+    flex-direction: column;
+    row-gap: 0px;
+  }
+}
+
+.jg-generate-strings-tool .jg-options .jg-column {
+  display: flex;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  row-gap: 0px;
+  column-gap: 10px;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.jg-generate-strings-tool .jg-options .jg-column.jg-right {
+  justify-content: end;
+  row-gap: 10px;
+}
+
+.jg-generate-strings-tool .jg-options button {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.jg-generate-strings-tool .jg-output::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.jg-generate-strings-tool .jg-output::-webkit-scrollbar-track {
+  background: none;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.jg-generate-strings-tool .jg-output::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border: 0;
+  background-color: rgb(36,216,170);
+  outline: none;
+  box-shadow: none;
+}
+.jg-generate-strings-tool .jg-output::-webkit-scrollbar-corner {
+  background-color: rgb(36,216,170);
+}
+
+
+@media screen and (min-width: 851px) {
+  .jg-generate-strings-tool .jg-padding-8-collapse {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
