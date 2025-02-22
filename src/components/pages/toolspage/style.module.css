@@ -556,3 +556,32 @@ not needed?
     padding-right: 8px;
   }
 }
+
+/*
+** Footer
+** 
+**
+*/
+
+.jg-footer {
+  box-sizing: border-box;
+  background-color: rgba(0,3,27);
+  color: #bbb;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 8px 16px 8px 16px;
+  text-transform: lowercase;
+}
+
+@media screen and (max-width: 400px) {
+  .jg-footer {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 401px) {
+  .jg-footer {
+    font-size: 11px;
+  }
+}

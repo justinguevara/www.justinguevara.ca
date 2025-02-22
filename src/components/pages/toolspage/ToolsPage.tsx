@@ -72,6 +72,7 @@ export default function ToolsPage (): JSX.Element {
           </div>
         </div>
       </div>
+      <div className={`${styles['jg-footer']}`}>ideas, programming and design by Justin Guevara</div>
     </div>
   );
 };
