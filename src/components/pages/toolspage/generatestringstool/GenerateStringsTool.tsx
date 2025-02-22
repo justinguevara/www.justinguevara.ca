@@ -80,7 +80,6 @@ export default function generateStringsTool ({styles}): JSX.Element {
             <div>
               Length
               <input type="text" className={`${styles['jg-inline-input']}`}
-                value={default_string_length}
                 size="2"
                 value={string_length}
                 onChange={handleStringLengthChange} />
