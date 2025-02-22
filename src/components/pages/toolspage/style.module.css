@@ -446,7 +446,7 @@ not needed?
   align-items: center;
 }
 
-.jg-tools-page .jg-secondary-menu-item-container.jg-menu-item:hover {
+.jg-tools-page .jg-secondary-menu-item-container .jg-menu-item:hover {
   background-color:  rgb(180, 180, 180);
 }
 
