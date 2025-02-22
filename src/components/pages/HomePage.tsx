@@ -17,7 +17,6 @@ function HomePage (): JSX.Element {
                 <li className="email">j[at]guevarajust[dot]in</li>
                 <li><a href="https://linkedin.com/in/justinguevara" className="link">linkedin.com/in/justinguevara</a></li>
               </ul>
-              <div className="secondary-font short-description">Experienced <span className="bold">Software Developer (Backend/Fullstack)</span> based in Toronto.</div>
             </section>
 
             <section className="quotes">

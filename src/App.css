@@ -67,7 +67,7 @@ html, body, #root {
 
 @media screen and (max-width: 480px) {
   .quotes {
-    margin-top: 64px;
+    margin-top: 48px;
   }
 }
 
@@ -79,7 +79,7 @@ html, body, #root {
 
 @media screen and (min-width: 1025px) {
   .quotes {
-    margin-top: 96px;
+    margin-top:78px;
   }
 }
 
@@ -478,7 +478,7 @@ a {
 
 @media screen and (max-width: 480px) {
   .front-page .name {
-    font-size: 38px
+    font-size: 39px
   }
 }
 
@@ -551,7 +551,8 @@ a {
 
   .front-page .below-name,
   .header-menu-primary>ul>li {
-    text-align: center
+    text-align: center;
+    line-height: 1.8em;
   }
 
   .header-menu-primary>ul>li>a {
