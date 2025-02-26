@@ -1,12 +1,12 @@
 import MainNavigation from "components/MainNavigation";
 import TermEvaluationTool from "./termevaluationtool/TermEvaluationTool";
 import GenerateStringsTool from "./generatestringstool/GenerateStringsTool";
+import GetTermDefinitionTool from "./gettermdefinitiontool/GetTermDefinitionTool";
 import "./navigation.css"; // override  navigation styles
 import styles from "./style.module.css";
 import { useState } from "react";
 
 export default function ToolsPage (): JSX.Element {
-  const [selected_option, setSelectedOption] = useState('');
   const [selected_tool, setSelectedTool] = useState(tools_list.generate_strings.id);
   const [show_mobile_secondary_menu, setShowMobileSecondaryMenu] = useState(false);
 
@@ -33,12 +33,7 @@ export default function ToolsPage (): JSX.Element {
     );
   });
 
-  let content_html = (<GenerateStringsTool styles={styles} />);
-  switch (selected_tool) {
-    case tools_list.evaluate_terms.id:
-      content_html = (<TermEvaluationTool styles={styles} />);
-      break;
-  }
+  let SelectedToolComponent = tools_list[selected_tool].component;
 
   return (
     <div id='jg-tools-page' className={`${styles['jg-page-wrapper']} ${styles['jg-tools-page']}`}>
@@ -57,7 +52,7 @@ export default function ToolsPage (): JSX.Element {
         <div className={`${styles['jg-page-container']} ${styles['jg-margin-bottom-96-collapse']}`}>
           <div className={styles['jg-two-column-layout']}>
             <div className={`${styles['jg-column']} ${styles['jg-column-2-3']}`}>
-              {content_html}
+              <SelectedToolComponent styles={styles}/>
             </div>
             <div className={`${styles['jg-column']} ${styles['jg-column-1-3']}`}>
             </div>
@@ -72,10 +67,17 @@ export default function ToolsPage (): JSX.Element {
 const tools_list = {
   evaluate_terms: {
     id: 'evaluate_terms',
-    label: 'evaluate terms'
+    label: 'evaluate terms',
+    component: TermEvaluationTool
   },
   generate_strings: {
     id: 'generate_strings',
-    label: 'generate strings'
+    label: 'generate strings',
+    component: GenerateStringsTool
+  },
+  get_term_definitions: {
+    id: 'get_term_definitions',
+    label: 'term definitions',
+    component: GetTermDefinitionTool
   }
 };

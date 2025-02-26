@@ -2,9 +2,8 @@ import EnvironmentService from "services/EnvironmentService";
 import { useState } from "react";
 import axios from "axios";
 
-export default function TermEvaluationTool ({root_class = 'default', styles}): JSX.Element {
+export default function GetTermDefinitionTool ({root_class = 'default', styles}): JSX.Element {
   const [term, setTerm] = useState('');
-  const [definition, setDefinition] = useState('');
   const [results, setResults] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -12,11 +11,10 @@ export default function TermEvaluationTool ({root_class = 'default', styles}): J
     event.preventDefault();
     setIsSubmitting(true);
     setResults(['...']);
+
     try {
-      const response = await axios.post(EnvironmentService.getUrlBase() + '/api/1/query', {
-        term: term,
-        definition: definition,
-        query_type: 'evaluate'
+      const response = await axios.post(EnvironmentService.getUrlBase() + '/api/1/definition-query', {
+        term: term
       }, {
         headers: {
           'Content-Type': 'application/json',
@@ -24,12 +22,8 @@ export default function TermEvaluationTool ({root_class = 'default', styles}): J
       });
       const data = response.data;
 
-      if (typeof (data[0].model ?? null) !== 'string') {
-        // @todo
-        throw 'error';
-      }
       const processed_elements = data.map(function (item, index) {
-        return `${item.model ?? 'Unknown model'} - ${(item.response?.content?.answer ?? 'error').toLowerCase()}`;
+        return `${item.query_id ?? 'Unknown model'} - ${(item.response?.content?.definition ?? 'error')}`;
       });
 
       setResults(processed_elements);
@@ -44,11 +38,11 @@ export default function TermEvaluationTool ({root_class = 'default', styles}): J
 
   return (
     <>
-      <h1 className={`${styles['jg-page-heading']} ${styles['jg-content-margin-top']}`}>Term Definition Evaluation</h1>
+      <h1 className={`${styles['jg-page-heading']} ${styles['jg-content-margin-top']}`}>Get Term Definitions</h1>
       <div className={`${styles['jg-padding-single-indent-collapse']} ${styles['jg-width-66-collapse']}`}>
-        Submit a term, along with its definition. 
-        The tool will invoke LLM models to evaluate the correctness of the definition.
+      Get a definition for a provided term. 
       </div>
+      
       <form onSubmit={handle_submit}>
         <div className={`${styles['jg-padding-8-collapse']} ${styles['jg-width-66-collapse']}`}>
           <h2 className={`${styles['jg-margin-top-50']} ${styles['jg-overflow-hidden']} ${styles['js-asterix-decorate']}`}>Term</h2>
@@ -60,15 +54,7 @@ export default function TermEvaluationTool ({root_class = 'default', styles}): J
           onChange={(e) => setTerm(e.target.value)}
           placeholder="Example - Project"
         />
-        <div className={`${styles['jg-padding-8-collapse']} ${styles['jg-width-66-collapse']}`}>
-          <h2 className={`${styles['jg-overflow-hidden']} ${styles['js-asterix-decorate']}`}>Definition</h2>
-        </div>
-        <textarea
-          className={`${styles['jg-textarea']} ${styles['jg-mb-1rem']} ${styles['jg-width-66-collapse']}`}
-          value={definition}
-          onChange={(e) => setDefinition(e.target.value)}
-          placeholder="Example - An individual or collaborative enterprise that is carefully planned to achieve a particular aim."
-        ></textarea>
+
         <button type="submit" className={styles['jg-submit-button']} disabled={isSubmitting}>
           {isSubmitting ? '...' : 'Submit'}
         </button>
@@ -78,9 +64,9 @@ export default function TermEvaluationTool ({root_class = 'default', styles}): J
           <h2 className={styles['jg-overflow-hidden']}>Results</h2>
         </div>
 
-        <div className={`${styles['jg-response-data']} ${styles['jg-response-data-fixed-height']}`}>
+        <div className={`${styles['jg-response-data-flexible-height']} ${styles['jg-response-data']}`}>
           {results.map(function (item, index) {
-            return (<div key={index}>{item}</div>);
+            return (<div className={styles['jg-response-data-section']} key={index}>{item}</div>);
           })}
         </div>
       </form>

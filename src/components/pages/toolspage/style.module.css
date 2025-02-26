@@ -32,6 +32,24 @@
   color:rgb(180,180,180);
   box-sizing: border-box;
   padding: 8px;
+  border: 1px solid;
+  overflow-y: auto;
+}
+
+.jg-tools-page textarea {
+  vertical-align: top;
+}
+
+.jg-tools-page .jg-response-data-fixed-height {
+  height: 200px;
+}
+
+.jg-tools-page .jg-response-data-flexible-height {
+  min-height: 200px;
+}
+
+.jg-tools-page .jg-response-data-section {
+  margin-bottom: 1.5em;
 }
 
 .jg-tools-page textarea:focus,
@@ -249,12 +267,6 @@ not needed?
 
 .jg-tools-page .jg-mt-2rem {
   margin-top: 2rem;
-}
-
-.jg-tools-page .jg-response-data {
-  border: 1px solid;
-  height: 200px;
-  overflow-y: auto;
 }
 
 .jg-tools-page .jg-two-column-layout {
