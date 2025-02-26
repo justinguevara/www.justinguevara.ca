@@ -12,7 +12,7 @@ export default function SummaryPage (): JSX.Element {
                         <p>Here is a quick summary of my work history and skills. No ChatGPT or LLMs involved.</p>
                         <p>
                         I have 7+ years of professional experience in web/software development, mostly with PHP/LAMP based tech stacks. <br/>
-                        The work I've done has leaned towards backend/server development, but ultimately, I'm comfortable with building and maintaining systems end-to-end. This includes frontend development and managing infraucture.
+                        The work I've done has leaned towards backend/server development, but ultimately, I'm comfortable with building and maintaining systems end-to-end. This includes frontend development and managing infrastructure.
                         </p>
 
                         <h3>Work history:</h3>
