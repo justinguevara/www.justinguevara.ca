@@ -2,6 +2,7 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  background-color: rgb(241, 242, 242)
 }
 
 @media screen and (max-width: 580px) {
@@ -96,12 +97,33 @@ html, body, #root {
   padding-right: 16px;
 }
 
+/* TODO - should be an image, not a div*/
 .home-heading-background {
   background: url('/jan31.png') no-repeat;
-  margin-bottom: 16px;
+
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (min-width: 1025px) {
+  .home-heading-background {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-heading-background {
+  }
+}
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 480px) {
   .home-heading-background {
@@ -159,7 +181,7 @@ html, body, #root {
     padding: 0;
     height: 100vh;
     background-color: white;
-    opacity: 0.95;
+    opacity: 0.98;
   }
 
   .default #menu-menu-1 .menu-item {
@@ -171,7 +193,7 @@ html, body, #root {
 
   .default #menu-menu-1 .menu-item:hover {
     opacity: 1;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(233, 233, 233);
   }
 
   .default .jg-menu-icon::after {
@@ -297,7 +319,7 @@ a {
   list-style: none;
   margin: 0;
   padding-inline-start: 0;
-  background-color: rgba(255, 255, 255, .95)
+  background-color: rgb(241, 242, 242);
 }
 
 .shop-page .primary-content-container {
@@ -464,21 +486,27 @@ a {
   margin-bottom: 12px
 }
 
-@media screen and (min-width: 721px) {
+@media screen and (min-width: 1024px) {
   .front-page .name {
-    font-size: 52px;
+    font-size: 64px;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1023px) {
+  .front-page .name {
+    font-size: 56px;
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 720px) {
   .front-page .name {
-    font-size: 42px
+    font-size: 54px
   }
 }
 
 @media screen and (max-width: 480px) {
   .front-page .name {
-    font-size: 39px
+    font-size: 39px;
   }
 }
 
