@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
-                
+import MainNavigation from "components/MainNavigation";
+
 function NotFoundPage (): JSX.Element {
   return (
     <>
+        <MainNavigation/>
         <div className="front-page">
             <div className="center-block-element content-width">
                 <div className="primary-content-container">

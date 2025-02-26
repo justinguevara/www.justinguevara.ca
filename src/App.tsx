@@ -6,6 +6,7 @@ import NotFoundPage from "components/pages/NotFoundPage";
 import MusicPage from "components/pages/MusicPage";
 import QuestionMarkPage from "components/pages/questionmarkpage/QuestionMarkPage";
 import ToolsPage from "components/pages/toolspage/ToolsPage";
+import SummaryPage from "components/pages/SummaryPage";
 
 function App (): JSX.Element {
   return (
@@ -16,6 +17,7 @@ function App (): JSX.Element {
         <Route path="/music" element={<MusicPage />} />
         <Route path="/q" element={<QuestionMarkPage />} />
         <Route path="/tools" element={<ToolsPage />} />
+        <Route path="/summary" element={<SummaryPage />} />
 
         {/* 404 */}
         <Route path="*" element={<NotFoundPage />} />

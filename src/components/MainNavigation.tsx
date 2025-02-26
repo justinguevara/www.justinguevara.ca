@@ -20,6 +20,7 @@ function MainNavigation ({root_class = 'default'}): JSX.Element {
         <div className="jg-menu-icon" onClick={handleMenuIconClick}></div>
         <div className={navigation_items_container_classes.join(" ")} id="header-navigation">
           <ul className="menu" id="menu-menu-1">
+            <li className="menu-item"><Link to="/summary">Summary</Link></li>
             <li className="menu-item"><Link to="/tools">Tools</Link></li>
             {/*<li className="menu-item"><Link to="/q">?</Link></li>*/}
             <li className="menu-item"><Link to="/about">About</Link></li>
