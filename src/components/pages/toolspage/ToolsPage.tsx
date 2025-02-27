@@ -37,29 +37,35 @@ export default function ToolsPage (): JSX.Element {
 
   return (
     <div id='jg-tools-page' className={`${styles['jg-page-wrapper']} ${styles['jg-tools-page']}`}>
-      <MainNavigation root_class="tools-page" />
+      <div className={`${styles['jg-non-footer']}`}>
+        <MainNavigation root_class="tools-page" />
 
-      <div className={`${styles['jg-secondary-menu']} ${styles[show_mobile_menu_class]}`}>
-        <div className={`${styles['jg-mobile-menu-icon']}`} onClick={handleSecondaryMenuIconClick}>Open tools menu</div>
-        <div className={`${styles['jg-secondary-menu-item-container-anchor']}`}>
-          <div className={`${styles['jg-secondary-menu-item-container']}`}>
-            {secondary_menu_html}
-          </div>
-        </div>
-      </div>
-
-      <div className={`${styles['jg-term-evaluation-tool-wrapper']}`}>
-        <div className={`${styles['jg-page-container']} ${styles['jg-margin-bottom-96-collapse']}`}>
-          <div className={styles['jg-two-column-layout']}>
-            <div className={`${styles['jg-column']} ${styles['jg-column-2-3']}`}>
-              <SelectedToolComponent styles={styles}/>
-            </div>
-            <div className={`${styles['jg-column']} ${styles['jg-column-1-3']}`}>
+        <div className={`${styles['jg-secondary-menu']} ${styles[show_mobile_menu_class]}`}>
+          <div className={`${styles['jg-mobile-menu-icon']}`} onClick={handleSecondaryMenuIconClick}>Open tools menu</div>
+          <div className={`${styles['jg-secondary-menu-item-container-anchor']}`}>
+            <div className={`${styles['jg-secondary-menu-item-container']}`}>
+              {secondary_menu_html}
             </div>
           </div>
         </div>
+
+        <div className={`${styles['jg-term-evaluation-tool-wrapper']}`}>
+          <div className={`${styles['jg-page-container']} ${styles['jg-padding-bottom-96-collapse']}`}>
+            <div className={styles['jg-two-column-layout']}>
+              <div className={`${styles['jg-column']} ${styles['jg-column-2-3']}`}>
+                <SelectedToolComponent styles={styles}/>
+              </div>
+              <div className={`${styles['jg-column']} ${styles['jg-column-1-3']}`}>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className={`${styles['jg-footer']}`}>ideas, programming and design by Justin Guevara</div>
+      <div className={`${styles['jg-footer']}`}>
+        <div className={`${styles['jg-footer-inner']}`}>
+          ideas, programming and design by Justin Guevara
+        </div>
+      </div>
     </div>
   );
 };

@@ -65,7 +65,7 @@ export default function GetTermDefinitionTool ({root_class = 'default', styles})
     );
   });
   toggles.push(
-    <div key={-1} className={`${styles['jg-full-width']}`}>
+    <div key={-1} className={`${styles['jg-full-width']} ${styles['jg-mt-5px']}`}>
       <div className={`${styles['jg-toggle-group-item']} ${styles['jg-toggle-group-item-secondary']}`}
         onClick={handleSelectAllClick}>
         Select all

@@ -100,7 +100,6 @@ html, body, #root {
 /* TODO - should be an image, not a div*/
 .home-heading-background {
   background: url('/jan31.png') no-repeat;
-
   margin-left: auto;
   margin-right: auto;
 }
@@ -108,19 +107,8 @@ html, body, #root {
 @media screen and (min-width: 1025px) {
   .home-heading-background {
     margin-bottom: 16px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .home-heading-background {
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .home-heading-background {
-    height: 184px;
-    background-size: 1400px;
-    background-position: center center;
+    height: 374px;
+    background-position: left top;
   }
 }
 
@@ -132,11 +120,11 @@ html, body, #root {
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 480px) {
   .home-heading-background {
-    height: 374px;
-
-    background-position: left top;
+    height: 184px;
+    background-size: 1400px;
+    background-position: center center;
   }
 }
 
