@@ -8,19 +8,37 @@ export default function SummaryPage (): JSX.Element {
             <div className="center-block-element content-width">
                 <div className="primary-content-container">
                     <section className="first-section">
-                        <h2>Hello.</h2>
-                        <p>Here is a quick summary of my work history and skills. No ChatGPT or LLMs involved.</p>
+                        <h2>Summary of skills and experience</h2>
+                        <h3>Overview</h3>
                         <p>
                         I have 7+ years of professional experience in web/software development, mostly with PHP/LAMP based tech stacks. <br/>
                         The work I've done has leaned towards backend/server development, but ultimately, I'm comfortable with building and maintaining systems end-to-end. This includes frontend development and managing infrastructure.
                         </p>
 
-                        <h3>Work history:</h3>
+                        <h3>History</h3>
                         <ul>
-                            <li>Allied Technical Solutions Inc. - 2 years</li>
-                            <li>Aware Ads Inc. - 3 years</li>
-                            <li>Rent  Panda Inc. - 6 months</li>
-                            <li>Contract work for various smaller businesses in Toronto - 2+ years</li>
+                            <li>Allied Technical Solutions Inc.</li>
+                                <ul>
+                                    <li>2 years</li>
+                                </ul>
+                            <li>Aware Ads Inc.</li>
+                                <ul>
+                                    <li>3 years</li>
+                                </ul>
+                            <li>Rent Panda Inc.</li>
+                                <ul>
+                                    <li>6 months</li>
+                                </ul>
+                            <li>Contract work for various smaller businesses in Toronto
+                                <ul>
+                                    <li> 2+ years (over 9+ year time period)</li>
+                                    <li>Non-exhaustive list of clients:</li>
+                                    <ul>
+                                        <li>Brickworks Ciderhouse</li>
+                                        <li>DY Printing Box</li>
+                                    </ul>
+                                </ul>
+                            </li>
                         </ul>
                         <p>
                         I would be happy to hear about your next web related project, even if you're just looking to solicit an opinion. <br/> 
