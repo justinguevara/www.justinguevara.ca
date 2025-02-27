@@ -22,7 +22,6 @@ function MainNavigation ({root_class = 'default'}): JSX.Element {
           <ul className="menu" id="menu-menu-1">
             <li className="menu-item"><Link to="/tools">Tools</Link></li>
             <li className="menu-item"><Link to="/summary">Summary</Link></li>
-            {/*<li className="menu-item"><Link to="/q">?</Link></li>*/}
             <li className="menu-item"><Link to="/about">About</Link></li>
             <li className="menu-item"><Link to="/">Home</Link></li>
           </ul>
