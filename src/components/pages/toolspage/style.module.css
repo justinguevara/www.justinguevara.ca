@@ -1,11 +1,45 @@
+/*
+** Containers
+*/
+
+.jg-tools-page {
+  --dark-theme-primary-2: rgb(0, 105, 108);
+  --dark-theme-primary-3: rgb(36, 216, 170);
+  --dark-theme-primary-4: rgba(36, 216, 171, 0.15);
+
+  --dark-theme-dark-2: rgb(0,3,27);
+  --dark-theme-dark-3: rgb(0,4,39);
+
+  --dark-theme-grey-100: rgb(100, 100, 100);
+  --dark-theme-grey-111: rgb(111, 111, 111);
+  --dark-theme-grey-122: rgb(122, 122, 122);
+  --dark-theme-grey-180: rgb(180, 180, 180);
+  --dark-theme-grey-136: rgb(136, 136, 136);
+  --dark-theme-grey-141: rgb(141, 141, 141);
+  --dark-theme-grey-187: rgb(187, 187, 187);
+  --dark-theme-grey-190: rgb(190, 190, 190);
+  --dark-theme-grey-221: rgb(221, 221, 221);
+  --dark-theme-grey-230: rgb(230, 230, 230);
+  --dark-theme-grey-240: rgb(240, 240, 240);
+
+  --dark-theme-grey-1: rgb(209,213,219);
+
+  --dark-theme-white: white;
+
+  --dark-theme-font-size-minus-1: 10px;
+  --dark-theme-font-size: 11px;
+
+  --dark-theme-background: var(--dark-theme-dark-3);
+}
+
 .jg-tools-page {
   flex-grow: 1;
 }
 
 .jg-tools-page {
-  background-color:rgb(0,4,39);
-  font-size: 11px;
-  color:rgb(36, 216, 170);
+  background-color: var(--dark-theme-background);
+  font-size: var(--dark-theme-font-size);
+  color: var(--dark-theme-primary-3);
   text-transform: uppercase;
   font-family: monospace;
   line-height: 1.5em;
@@ -14,73 +48,89 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between
-
 }
 
-/* everything except the footer*/
-.jg-tools-page .jg-non-footer {
-  background-color:rgb(0,4,39);
+/*
+** Containers - Containers 1
+*/
+
+.jg-tools-page .jg-page-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
 }
 
-.jg-tools-page textarea,
-.jg-tools-page input,
-.jg-tools-page .jg-response-data, 
-.jg-tools-page button {
-  background-color:rgb(0,4,39);
-  font-size: 11px;
-  color:rgb(36, 216, 170);
+@media screen and (min-width: 1200px) {
+  .jg-tools-page .jg-page-container {
+    width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .jg-tools-page .jg-page-container {
+    width: 100%;
+  }
+}
+
+/*
+** Containers - Containers 2
+*/
+
+.jg-tools-page .jg-page-content {
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  .jg-tools-page .jg-page-content {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 851px) {
+  .jg-tools-page .jg-page-content {
+    width: 790px;
+  }
+}
+
+/*
+** General elements/unsorted
+*/
+
+.jg-tools-page textarea {
+  background-color: var(--dark-theme-background);
+  font-size: var(--dark-theme-font-size);
+  color: var(--dark-theme-primary-3);
   text-transform: uppercase;
   font-family: monospace;
   line-height: 1.5em;
   letter-spacing: 0;
-}
-
-.jg-tools-page textarea,
-.jg-tools-page input,
-.jg-tools-page .jg-response-data, 
-.jg-tools-page button {
-  border-color:white;
+  border-color: var(--dark-theme-white);
   outline: none;
   box-shadow: none;
-}
-
-.jg-tools-page textarea,
-.jg-tools-page input,
-.jg-tools-page .jg-response-data {
   text-transform: none;
-  color:rgb(180,180,180);
+  color: var(--dark-theme-grey-180);
   box-sizing: border-box;
   padding: 8px;
   border: 1px solid;
   overflow-y: auto;
-}
-
-.jg-tools-page textarea {
   vertical-align: top;
 }
 
-.jg-tools-page .jg-response-data-fixed-height {
-  height: 200px;
-}
-
-.jg-tools-page .jg-response-data-flexible-height {
-  min-height: 200px;
-}
-
-.jg-tools-page .jg-response-data-section {
-  margin-bottom: 1.5em;
-}
-
-.jg-tools-page textarea:focus,
-.jg-tools-page input:focus {
+.jg-tools-page textarea:focus {
   outline: none;
   box-shadow: none;
-  border-color: rgb(180,180,180);
+  border-color: var(--dark-theme-grey-180);
 }
 
-.jg-tools-page input::placeholder,
 .jg-tools-page textarea::placeholder {
-  color: #888888;
+  color: var(--dark-theme-grey-136);
 }
 
 .jg-tools-page textarea::-webkit-scrollbar {
@@ -103,14 +153,56 @@
 .jg-tools-page textarea::-webkit-scrollbar-thumb {
   cursor: pointer;
   border: 0;
-  background-color: #DDD;
+  background-color: var(--dark-theme-grey-221);
+  outline: none;
+  box-shadow: none;
+}
+
+.jg-tools-page input {
+  background-color: var(--dark-theme-background);
+  font-size: var(--dark-theme-font-size);
+  color: var(--dark-theme-primary-3);
+  text-transform: uppercase;
+  font-family: monospace;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  border-color: var(--dark-theme-white);
+  outline: none;
+  box-shadow: none;
+  text-transform: none;
+  color: var(--dark-theme-grey-180);
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid;
+  overflow-y: auto;
+}
+
+.jg-tools-page input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--dark-theme-grey-180);
+}
+
+.jg-tools-page input::placeholder {
+  color: var(--dark-theme-grey-136);
+}
+
+.jg-tools-page button {
+  background-color: var(--dark-theme-background);
+  font-size: var(--dark-theme-font-size);
+  color: var(--dark-theme-primary-3);
+  text-transform: uppercase;
+  font-family: monospace;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  border-color: var(--dark-theme-white);
   outline: none;
   box-shadow: none;
 }
 
 .jg-tools-page button {
   border-style: solid;
-  border-color: rgb(36,216,170);
+  border-color: var(--dark-theme-primary-3);
   border-width: 1px;
   cursor: pointer;
   display: block;
@@ -120,31 +212,101 @@
 }
 .jg-tools-page button:hover {
   background-color: transparent;
-  border-color: white;
-  color: white;
+  border-color: var(--dark-theme-white);
+  color: var(--dark-theme-white);
 }
 
+/*
+** Classed elements
+*/
+
+/*
+** Classed elements - Text area
+*/
+
+.jg-tools-page .jg-textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 0.5rem;
+  border: 1px solid var(--dark-theme-grey-1);
+  font-family: inherit;
+  resize: none;
+}
+
+/*
+** Classed elements - Input
+*/
+
+.jg-tools-page .jg-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--dark-theme-grey-1);
+}
+
+/*
+** Response/outputs panel
+*/
+
+.jg-tools-page .jg-response-data {
+  background-color: var(--dark-theme-background);
+  font-size: var(--dark-theme-font-size);
+  color: var(--dark-theme-primary-3);
+  text-transform: uppercase;
+  font-family: monospace;
+  line-height: 1.5em;
+  letter-spacing: 0;
+}
+
+.jg-tools-page .jg-response-data {
+  border-color: var(--dark-theme-white);
+  outline: none;
+  box-shadow: none;
+}
+
+.jg-tools-page .jg-response-data {
+  text-transform: none;
+  color: var(--dark-theme-grey-180);
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid;
+  overflow-y: auto;
+}
+
+/*
+** Response/outputs panel - fixed height
+*/
+
+.jg-tools-page .jg-response-data-fixed-height {
+  height: 200px;
+}
+
+.jg-tools-page .jg-response-data-flexible-height {
+  min-height: 200px;
+}
+
+.jg-tools-page .jg-response-data-section {
+  margin-bottom: 1.5em;
+}
+
+/*
+** Headings
+*/
+
 .jg-tools-page .jg-page-heading {
-  background-color: rgb(0,105,108);
-  font-size: 11px;
+  background-color: var(--dark-theme-primary-2);
+  font-size: var(--dark-theme-font-size);
   padding: 8px;
   margin-bottom: 1rem;
 }
 
 .jg-tools-page h2 {
   margin-bottom: 0.5rem;
-  font-size: 11px;
+  font-size: var(--dark-theme-font-size);
 }
 
 /*
-not needed?
-
-.jg-tools-page h2.js-asterix-decorate::after {
-  position: relative;
-  left: 10px;
-  top: 2px;
-  content: "********************************************************************************************************************************************************************************************************************************************************************";
-}
+** Utility
 */
 
 .jg-tools-page .jg-full-width {
@@ -231,67 +393,6 @@ not needed?
   }
 }
 
-.jg-tools-page .header-menu-primary{
-  display: none;
-}
-
-.jg-tools-page .jg-page-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 16px;
-  padding-right: 16px;
-  box-sizing: border-box;
-}
-
-@media screen and (min-width: 1200px) {
-  .jg-tools-page .jg-page-container {
-    width: 1200px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .jg-tools-page .jg-page-container {
-    width: 100%;
-  }
-}
-
-.jg-tools-page .jg-page-content {
-  padding-left: 16px;
-  padding-right: 16px;
-  box-sizing: border-box;
-  margin-right: auto;
-  width: 100%;
-}
-
-@media screen and (max-width: 850px) {
-  .jg-tools-page .jg-page-content {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 851px) {
-  .jg-tools-page .jg-page-content {
-    width: 790px;
-  }
-}
-
-.jg-tools-page .jg-textarea {
-  width: 100%;
-  height: 10rem;
-  padding: 0.5rem;
-  border: 1px solid #d1d5db;
-  font-family: inherit;
-  resize: none;
-}
-
-.jg-tools-page .jg-input {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #d1d5db;
-}
-
 .jg-tools-page .jg-mb-1rem {
   margin-bottom: 1rem;
 }
@@ -307,6 +408,10 @@ not needed?
 .jg-tools-page .jg-mt-2rem {
   margin-top: 2rem;
 }
+
+/*
+** Layout
+*/
 
 .jg-tools-page .jg-two-column-layout {
   display: flex;
@@ -365,7 +470,7 @@ not needed?
     width: 12px;
     height: 12px;
     border: 0;
-    background-color: rgb(100, 100, 100);
+    background-color: var(--dark-theme-grey-100);
     outline: none;
     box-shadow: none;
   }
@@ -382,7 +487,7 @@ not needed?
   .jg-tools-page .jg-secondary-menu-item-container::-webkit-scrollbar-thumb {
     cursor: pointer;
     border: 0;
-    background-color: rgb(122, 122, 122);
+    background-color: var(--dark-theme-grey-122);
     outline: none;
     box-shadow: none;
   }
@@ -413,8 +518,8 @@ not needed?
     align-items: center;
     justify-content: center;
     padding: 8px 50px 8px 50px;
-    background-color:  rgb(111, 111, 111);
-    color: rgb(190,190,190);
+    background-color:  var(--dark-theme-grey-111);
+    color: var(--dark-theme-grey-190);
     height: 32.5px;
   }
 
@@ -423,8 +528,8 @@ not needed?
   }
 
   .jg-tools-page .jg-secondary-menu .jg-mobile-menu-icon:hover {
-    background-color: rgb(141, 141, 141);
-    color: rgb(240,240,240);
+    background-color: var(--dark-theme-grey-141);
+    color: var(--dark-theme-grey-240);
   }
 
   .jg-tools-page .jg-hide .jg-secondary-menu-item-container .jg-menu-item {
@@ -433,7 +538,7 @@ not needed?
 
   .jg-tools-page .jg-show .jg-secondary-menu-item-container .jg-menu-item {
     width: 100%;
-    color: rgb(190,190,190);
+    color: var(--dark-theme-grey-190);
     height: 32.5px;
   }
 
@@ -443,12 +548,12 @@ not needed?
   }
 
   .jg-tools-page .jg-show .jg-secondary-menu-item-container .jg-menu-item:hover {
-    background-color: rgb(141, 141, 141);
-    color: rgb(240,240,240);
+    background-color: var(--dark-theme-grey-141);
+    color: var(--dark-theme-grey-240);
   }
 
   .jg-tools-page .jg-secondary-menu.jg-show:before {
-    background-color: rgb(0, 4, 39);
+    background-color: var(--dark-theme-background);
     width: 150vw;
     height: 150vh;
     position: fixed;
@@ -488,8 +593,8 @@ not needed?
   padding: 2px 50px 2px 50px;
   box-sizing: border-box;
   cursor: pointer;
-  background-color:  rgb(100, 100, 100);
-  color: rgb(0, 4, 39);
+  background-color: var(--dark-theme-grey-100);
+  color: var(--dark-theme-background);
   overflow: hidden;
   white-space: nowrap;
   height: 23px;
@@ -498,11 +603,11 @@ not needed?
 }
 
 .jg-tools-page .jg-secondary-menu-item-container .jg-menu-item:hover {
-  background-color:  rgb(180, 180, 180);
+  background-color: var(--dark-theme-grey-180);
 }
 
 .jg-tools-page .jg-secondary-menu-item-container .jg-menu-item > span:before {
-  font-size: 10px;
+  font-size: var(--dark-theme-font-size-minus-1);
   opacity: 0.2;
   text-transform: uppercase;
   content: "\00A0\00A0";
@@ -510,16 +615,15 @@ not needed?
 }
 
 .jg-tools-page .jg-secondary-menu-item-container .jg-menu-item > span:after {
-  font-size: 10px;
+  font-size: var(--dark-theme-font-size-minus-1);
   opacity: 0.2;
   text-transform: uppercase;
   content: "\00A0\00A0";
 }
 
 /*
-**
+** UI modules - generate strings tool
 ** 
-**
 */
 
 .jg-tools-page .jg-generate-strings-tool .jg-inline-input {
@@ -534,11 +638,11 @@ not needed?
   text-transform: none;
   box-sizing: border-box;
   border-style: solid;
-  border-color: rgb(36,216,170);
+  border-color: var(--dark-theme-primary-3);
   border-width: 1px;
   padding: 8px;
   overflow: auto;
-  color: rgb(36, 216, 170);
+  color: var(--dark-theme-primary-3);
 }
 
 .jg-tools-page .jg-generate-strings-tool .jg-options {
@@ -593,12 +697,12 @@ not needed?
 .jg-tools-page .jg-generate-strings-tool .jg-output::-webkit-scrollbar-thumb {
   cursor: pointer;
   border: 0;
-  background-color: rgb(36,216,170);
+  background-color: var(--dark-theme-primary-3);
   outline: none;
   box-shadow: none;
 }
 .jg-tools-page .jg-generate-strings-tool .jg-output::-webkit-scrollbar-corner {
-  background-color: rgba(36, 216, 171, 0.15);
+  background-color: var(--dark-theme-primary-4);
 }
 
 @media screen and (min-width: 851px) {
@@ -610,8 +714,6 @@ not needed?
 
 /*
 ** Footer
-** 
-**
 */
 
 .jg-tools-page .jg-footer {
@@ -622,28 +724,34 @@ not needed?
 
 @media screen and (max-width: 400px) {
   .jg-tools-page .jg-footer {
-    font-size: 10px;
+    font-size: var(--dark-theme-font-size-minus-1);
   }
 }
 
 @media screen and (min-width: 401px) {
   .jg-tools-page .jg-footer {
-    font-size: 11px;
+    font-size: var(--dark-theme-font-size);
   }
 }
 
 .jg-tools-page .jg-footer-inner {
-  background-color: rgba(0,3,27);
+  background-color: var(--dark-theme-dark-2);
   padding: 6px 12px 6px 12px;
   box-sizing: border-box;
-  color: #bbb;
+  color: var(--dark-theme-grey-187);
   text-transform: lowercase;
 }
 
 /*
-**
-** 
-**
+** Non Footer - everything except footer
+*/
+
+.jg-tools-page .jg-non-footer {
+  background-color: var(--dark-theme-background);
+}
+
+/*
+** Toggle group
 */
 
 .jg-tools-page .jg-toggle-group-container {
@@ -670,8 +778,8 @@ not needed?
 
   border-style: solid;
   border-width: 1px;
-  border-color: rgb(180, 180, 180);
-  color: rgb(180, 180, 180);
+  border-color: var(--dark-theme-grey-180);
+  color: var(--dark-theme-grey-180);
 }
 
 .jg-tools-page .jg-toggle-group-container .jg-toggle-group-item {
@@ -686,21 +794,16 @@ not needed?
 
   border-style: solid;
   border-width: 1px;
-  border-color: rgb(180, 180, 180);
-  color: rgb(180, 180, 180);
+  border-color: var(--dark-theme-grey-180);
+  color: var(--dark-theme-grey-180);
 }
 
 .jg-tools-page .jg-toggle-group-container .jg-toggle-group-item:hover {
-  border-color: rgb(230, 230, 230);
-  color: rgb(230, 230, 230);
+  border-color: var(--dark-theme-grey-230);
+  color: var(--dark-theme-grey-230);
 }
 
 .jg-tools-page .jg-toggle-group-container .jg-toggle-group-item.jg-toggle-group-item-is-toggled {
-  border-color: rgb(36, 216, 170);
-  color: rgb(36, 216, 170);
+  border-color: var(--dark-theme-primary-3);
+  color: var(--dark-theme-primary-3);
 }
-
-.jg-tools-page .jg-toggle-group-container .jg-toggle-group-item.jg-toggle-group-item-is-toggled:hover {
-
-}
-
