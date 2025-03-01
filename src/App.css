@@ -1,243 +1,59 @@
-html, body, #root {
+/*
+ * 2018 
+ */
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+/*
+ * Global
+ */
+html {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   background-color: rgb(241, 242, 242)
 }
 
-@media screen and (max-width: 580px) {
-  .music-player .aux {
-    display: none;
-  }
-}
-.music-page .first-section {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-@media screen and (max-width: 550px) {
-  .music-page .first-section {
-    width: 100%;
-    display: block;
-  }
-}
-@media screen and (min-width: 551px) and (max-width: 1499px) {
-  .music-page .first-section {
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media screen and (min-width: 1500px) {
-  .music-page .first-section {
-    width: 500px;
-  }
-}
-
-.music-player-current-track-name {
-  padding: 12px;
-  text-align: center;
-  margin-top: 16px;
-  font-weight: bold;
-  font-size: 14px;
-}
-.music-player ul, .music-player li {
-  margin: 0;
-  padding: 0;
-}
-.music-player ul {
-  list-style-type: none;
-  border-radius: 15px;
-}
-.music-player li {
-  padding: 10px;
-  background-color: rgb(241, 243, 244);
-  cursor: pointer;
-}
-.music-player li:hover {
-  background-color: rgb(228, 228, 228);
-}
-.music-player {
-  margin-top: 32px;
-}
-.music-player audio {
-  border-radius: 0!important;
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-}
-
-@media screen and (max-width: 480px) {
-  .quotes {
-    margin-top: 48px;
-  }
-}
-
-@media screen and (max-width:1024px) and (min-width:481px) {
-  .quotes {
-    margin-top: 70px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .quotes {
-    margin-top:78px;
-  }
-}
-
-@media screen and (min-width:481px) {
-  .feature-container {
-    margin-top: 8px;
-  }
-}
-
-.feature-container {
-  margin-top: 8px;
-  box-sizing: content-box;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-/* TODO - should be an image, not a div*/
-.home-heading-background {
-  background: url('/jan31.png') no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 1025px) {
-  .home-heading-background {
-    margin-bottom: 16px;
-    height: 374px;
-    background-position: left top;
-  }
-}
-
-@media screen and (max-width:1024px) and (min-width:481px) {
-  .home-heading-background {
-    height: 202px;
-    background-size: 1525px;
-    background-position: left top;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .home-heading-background {
-    height: 184px;
-    background-size: 1400px;
-    background-position: center center;
-  }
-}
-
-.default.header-primary > nav {
+body {
+  font-size: 13px;
+  min-height: 100vh;
   display: flex;
-  justify-content: end;
-  flex-wrap: wrap;
-}
-
-@media screen and (max-width: 480px) {
-  .default.header-primary {
-    padding: 4px 12px 0px 12px;
-  }
-
-  .header-primary {
-    min-height: 1.5em;
-  }
-
-  .default .header-menu-primary.hide{
-    display: none;
-  }
-
-  .default #header-navigation {
-    width: 100%;
-    position: relative;
-  }
-
-  .default #menu-menu-1 {
-    position: absolute;
-    top: 8px;
-    left: 0;
-    width: 100%;
-    padding: 0;
-    height: 100vh;
-    background-color: white;
-    opacity: 0.98;
-  }
-
-  .default #menu-menu-1 .menu-item {
-    display: block;
-    background-color:white;
-    padding: 0; 
-    text-align: center;
-  }
-
-  .default #menu-menu-1 .menu-item:hover {
-    opacity: 1;
-    background-color: rgb(233, 233, 233);
-  }
-
-  .default .jg-menu-icon::after {
-    display: inline-block;
-    content: "...";
-    padding: 10px;
-    cursor: pointer;
-    font-size: 11px;
-    font-family: monospace;
-  }
-
-  .default .jg-menu-icon:hover::after {
-    opacity: 0.6;
-  }
-}
-
-.header-menu-primary>ul>li,
-body {
-  font-size: 13px
-}
-
-.front-page .quotes .quote .person,
-.subfooter {
-  text-align: right
-}
-
-.front-page .quotes .quote .person,
-.secondary-font {
-  font-family: Arial, sans-serif
-}
-
-*,
-:after,
-:before {
-  box-sizing: inherit
-}
-
-html {
-  overflow-y: scroll;
-  box-sizing: border-box
-}
-
-body,
-html {
-  min-height: 100%
-}
-
-body {
-  margin: 0;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: rgb(241, 242, 242);
   line-height: 140%;
   font-family: Poppins, Arial, sans-serif;
-  min-height: 100vh;
   overflow: hidden;
   position: relative;
-}
-
-a,
-body {
+  margin: 0;
   color: black;
 }
 
 a {
+  color: black;
   text-decoration: none
 }
 
+/*
+ * Global (React)
+ */
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: rgb(241, 242, 242)
+}
+
+/*
+ * Global utility
+ */
 @media (min-width:1200px) {
   .content-width {
     width: 1180px
@@ -255,185 +71,100 @@ a {
   margin-right: auto
 }
 
-.subfooter {
-  bottom: 0;
-  position: absolute;
-  height: 40px;
-  width: 100%;
-  line-height: 0
+/*
+ * Home page
+ */
+@media screen and (max-width: 480px) {
+  .front-page .quotes {
+    margin-top: 48px;
+  }
 }
 
-.shop.subfooter .stripe-badge {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 16px
+@media screen and (max-width:1024px) and (min-width:481px) {
+  .front-page .quotes {
+    margin-top: 70px;
+  }
 }
 
-.shop.subfooter .stripe-badge img {
-  height: 20px
+@media screen and (min-width: 1025px) {
+  .front-page .quotes {
+    margin-top:78px;
+  }
 }
 
-.header-primary .mobile-menu-bar,
-.woocommerce .cart-page .woocommerce-message::before {
-  display: none
+@media screen and (min-width:481px) {
+  .front-page .feature-container {
+    margin-top: 8px;
+  }
 }
 
-#open-menu-button {
-  font-size: 30px;
-  width: 46px;
-  height: 30px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  cursor: pointer
+.front-page .feature-container {
+  margin-top: 8px;
+  box-sizing: content-box;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-#open-menu-button:hover,
-.front-page .link:hover,
-.front-page .quotes .quote .person a:hover,
-.header-menu-primary>ul>li:hover {
+/* TODO - should be an image, not a div*/
+.front-page .home-heading-background {
+  background: url('/jan31.png') no-repeat;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1025px) {
+  .front-page .home-heading-background {
+    margin-bottom: 16px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .front-page .home-heading-background {
+    height: 184px;
+    background-size: 1400px;
+    background-position: center center;
+  }
+}
+
+@media screen and (max-width:1024px) and (min-width:481px) {
+  .front-page .home-heading-background {
+    height: 202px;
+    background-size: 1525px;
+    background-position: left top;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .front-page .home-heading-background {
+    height: 374px;
+    background-position: left top;
+  }
+}
+
+.front-page .quotes .quote .person {
+  text-align: right
+}
+
+.front-page .quotes .quote .person {
+  font-family: Arial, sans-serif
+}
+
+.secondary-font {
+  font-family: Arial, sans-serif
+}
+
+.front-page .link:hover {
   opacity: 0.4
 }
 
-.header-menu-primary>ul {
-  list-style: none;
-  margin: 0;
-  padding-inline-start: 0;
-  background-color: rgb(241, 242, 242);
+.front-page .quotes .quote .person a:hover {
+  opacity: 0.4
 }
 
-.shop-page .primary-content-container {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 58px
-}
-
-@media (max-width:629px) and (min-width:481px) {
-  .shop-page .primary-content-container .primary-content-container h2.woocommerce-loop-product__title {
-    min-height: 40px
-  }
-}
-
-.woocommerce .shop-page .primary-content-container .woocommerce-Price-amount {
-  color: #777
-}
-
-.woocommerce .shop-page .added_to_cart {
-  margin-left: 12px
-}
-
-.single-product-page .primary-content-container {
-  padding-left: 16px;
-  padding-right: 16px;
+.front-page .quotes .quote {
   padding-bottom: 64px
-}
-
-.front-page .quotes .quote,
-.single-product-page .primary-content-container #primary {
-  padding-bottom: 64px
-}
-
-.single-product-page p.price,
-.woocommerce-product-gallery__wrapper {
-  margin: 0
-}
-
-.single-product-page .price {
-  font-weight: 400;
-  color: #777;
-  line-height: 140%;
-  margin: 0;
-  padding: 0
-}
-
-.single-product-page .woocommerce-product-details__short-description>p {
-  margin: 0;
-  line-height: 1.4em;
-  padding-top: 3px;
-  padding-bottom: 40px
-}
-
-@media (min-width:769px) {
-  .single-product-page .woocommerce-product-gallery__image--placeholder img.wp-post-image {
-    width: 480px
-  }
-
-  .single-product-page .summary .product_title {
-    margin: 0;
-    padding: 8px 0 0;
-    line-height: 140%
-  }
-
-  .single-product-page .price {
-    font-size: 16px
-  }
-
-  .single-product-page .woocommerce-product-details__short-description>p {
-    min-height: 65px
-  }
-}
-
-@media (max-width:768px) {
-  .single-product-page .woocommerce-product-gallery__image--placeholder img.wp-post-image {
-    width: 100%
-  }
-
-  .single-product-page .summary .product_title {
-    font-size: 18px;
-    margin: 0;
-    padding: 8px 0
-  }
-
-  .single-product-page .price,
-  .single-product-page .woocommerce-product-details__short-description>p {
-    font-size: 13px
-  }
-}
-
-.single-product-page .summary button.single_add_to_cart_button {
-  overflow: visible;
-  cursor: pointer;
-  margin: 0;
-  font-size: 100%;
-  border: none;
-  outline: 0;
-  font-family: inherit;
-  color: #515151;
-  background: #ebe9eb;
-  text-transform: none;
-  -webkit-appearance: button;
-  padding: 0.618em 1em;
-  border-radius: 3px;
-  line-height: 1;
-  font-weight: 700
-}
-
-.single-product-page .summary button.single_add_to_cart_button:hover {
-  background-color: #dad8da
-}
-
-.single-product-page input.input-text {
-  display: block;
-  padding-top: 2px;
-  padding-left: 8px;
-  width: 48px;
-  box-sizing: content-box
-}
-
-.single-product-page .quantity .screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  word-wrap: normal !important
-}
-
-.single-product-page .quantity {
-  padding-bottom: 11px
 }
 
 @media (min-width:821px) {
@@ -520,24 +251,6 @@ a {
 }
 
 @media (min-width:481px) {
-  .header-primary .mobile-menu-bar {
-    display: none
-  }
-
-  .header-menu-primary>ul {
-    text-align: right;
-    padding-right: 16px
-  }
-
-  .header-menu-primary>ul>li {
-    display: inline-block
-  }
-
-  .header-menu-primary>ul>li>a {
-    display: block;
-    padding: 16px
-  }
-
   .front-page .quotes .quote .content {
     font-size: 22px;
     padding-right: 20%
@@ -545,32 +258,9 @@ a {
 }
 
 @media (max-width:480px) {
-  .header-primary .mobile-menu-bar {
-    display: block;
-    text-align: right
-  }
-
-  .header-menu-primary>ul {
-    padding-right: 16px;
-    padding-left: 16px;
-    padding-bottom: 32px
-  }
-
-  .front-page .below-name,
-  .header-menu-primary>ul>li {
+  .front-page .below-name {
     text-align: center;
     line-height: 1.8em;
-  }
-
-  .header-menu-primary>ul>li>a {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px
-  }
-
-  .woocommerce .shop-page .primary-content-container ul.products[class*=columns-] li.product.type-product,
-  .woocommerce-page .shop-page .primary-content-container ul.products[class*=columns-] li.product.type-product {
-    width: 100%
   }
 
   .front-page .quotes .quote .content {
@@ -596,56 +286,205 @@ a {
   text-decoration: underline
 }
 
-.front-page.subfooter>div {
-  box-sizing: content-box;
-  height: 20px;
-  line-height: 20px;
-  padding-top: 12px;
-  padding-bottom: 8px;
+/*
+ * Global - Primary navigation menu
+ */
+
+.header-menu-primary>ul {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: 0;
+  background-color: rgb(241, 242, 242);
+}
+
+.header-primary .mobile-menu-bar {
+  display: none
+}
+
+@media (min-width:481px) {
+  .header-primary .mobile-menu-bar {
+    display: none
+  }
+
+  .header-menu-primary>ul {
+    text-align: right;
+    padding-right: 16px
+  }
+
+  .header-menu-primary>ul>li {
+    display: inline-block
+  }
+
+  .header-menu-primary>ul>li>a {
+    display: block;
+    padding: 16px
+  }
+}
+
+@media (max-width:480px) {
+  .header-menu-primary>ul>li {
+    text-align: center;
+    line-height: 1.8em;
+  }
+}
+
+@media (max-width:480px) {
+  .header-primary .mobile-menu-bar {
+    display: block;
+    text-align: right
+  }
+
+  .header-menu-primary>ul {
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 32px
+  }
+  .header-menu-primary>ul>li>a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px
+  }
+}
+
+.default.header-primary > nav {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 480px) {
+  .default.header-primary {
+    padding: 4px 12px 0px 12px;
+  }
+
+  .header-primary {
+    min-height: 1.5em;
+  }
+
+  .default .header-menu-primary.hide{
+    display: none;
+  }
+
+  .default #header-navigation {
+    width: 100%;
+    position: relative;
+  }
+
+  .default #menu-menu-1 {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    height: 100vh;
+    background-color: white;
+    opacity: 0.98;
+  }
+
+  .default #menu-menu-1 .menu-item {
+    display: block;
+    background-color:white;
+    padding: 0; 
+    text-align: center;
+  }
+
+  .default #menu-menu-1 .menu-item:hover {
+    opacity: 1;
+    background-color: rgb(233, 233, 233);
+  }
+
+  .default .jg-menu-icon::after {
+    display: inline-block;
+    content: "...";
+    padding: 10px;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: monospace;
+  }
+
+  .default .jg-menu-icon:hover::after {
+    opacity: 0.6;
+  }
+}
+
+.header-menu-primary > ul >li {
+  font-size: 13px
+}
+
+.header-menu-primary > ul >li:hover {
+  opacity: 0.4
+}
+
+/*
+ * Music page
+ */
+
+@media screen and (max-width: 580px) {
+  .music-player .aux {
+    display: none;
+  }
+}
+.music-page .first-section {
+  padding-left: 16px;
   padding-right: 16px;
-  overflow: hidden
 }
 
-.front-page.subfooter .bold {
-  font-weight: 800;
-  font-size: 11px
+@media screen and (max-width: 550px) {
+  .music-page .first-section {
+    width: 100%;
+    display: block;
+  }
 }
 
-.woocommerce .cart-page,
-.woocommerce .checkout-page {
-  padding: 16px 16px 64px
+@media screen and (min-width: 551px) and (max-width: 1499px) {
+  .music-page .first-section {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.woocommerce .cart-page a.checkout-button.button:hover,
-.woocommerce .checkout-page .button.alt {
-  background-color: #dad8da;
-  color: #515151
+@media screen and (min-width: 1500px) {
+  .music-page .first-section {
+    width: 500px;
+  }
 }
 
-.woocommerce .checkout-page .button.alt:hover {
-  background-color: #c8c8c8;
-  color: #515151
+.music-player-current-track-name {
+  padding: 12px;
+  text-align: center;
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-.woocommerce .cart-page .cart-empty,
-.woocommerce .cart-page .return-to-shop {
-  text-align: center
+.music-player ul, .music-player li {
+  margin: 0;
+  padding: 0;
 }
 
-.woocommerce .cart-page a.checkout-button.button {
-  background-color: #ebe9eb;
-  color: #515151
+.music-player ul {
+  list-style-type: none;
+  border-radius: 15px;
 }
 
-.woocommerce .woocommerce-message {
-  background-color: #eee;
-  padding: 13px
+.music-player li {
+  padding: 10px;
+  background-color: rgb(241, 243, 244);
+  cursor: pointer;
 }
 
-.woocommerce .woocommerce-message a {
-  text-decoration: underline;
-  font-weight: 500;
+.music-player li:hover {
+  background-color: rgb(228, 228, 228);
 }
-.short-description .bold {
-  font-weight: 600 !important;
+
+.music-player {
+  margin-top: 32px;
+}
+
+.music-player audio {
+  border-radius: 0!important;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
 }
