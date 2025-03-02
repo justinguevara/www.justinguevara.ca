@@ -121,7 +121,6 @@ export default function NotesTool({
           onChange={handleTextEditorContentChange}
           onKeyDown={handleKeyDown}
           value={content}
-          placeholder={'...'}
         ></textarea>
         <div className={`${styles['jg-text-editor-footer']}`}>
           <div className={`${styles['jg-text-editor-footer-child']}`}>Lines {line_count}</div>
