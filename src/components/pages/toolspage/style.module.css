@@ -813,13 +813,13 @@
 .jg-tools-page .jg-text-editor::-webkit-scrollbar-thumb {
   cursor: pointer;
   border: 0;
-  background-color: var(--dark-theme-grey-100);
+  background-color: var(--dark-theme-grey-180);
   outline: none;
   box-shadow: none;
 }
 
 .jg-tools-page .jg-text-editor::-webkit-scrollbar-corner {
-  background-color: var(--dark-theme-grey-100);
+  background-color: var(--dark-theme-grey-180);
 }
 
 .jg-tools-page .jg-text-editor-footer {
