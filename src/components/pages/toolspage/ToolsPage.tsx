@@ -2,6 +2,7 @@ import MainNavigation from "components/MainNavigation";
 import TermEvaluationTool from "./termevaluationtool/TermEvaluationTool";
 import GenerateStringsTool from "./generatestringstool/GenerateStringsTool";
 import GetTermDefinitionTool from "./gettermdefinitiontool/GetTermDefinitionTool";
+import NotesTool from "./notestool/NotesTool";
 import "./navigation.css"; // override  navigation styles
 import styles from "./style.module.css";
 import { useState } from "react";
@@ -85,5 +86,10 @@ const tools_list = {
     id: 'get_term_definitions',
     label: 'term definitions',
     component: GetTermDefinitionTool
+  },
+  notes: {
+    id: 'notes',
+    label: 'text dump',
+    component: NotesTool
   }
 };

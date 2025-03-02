@@ -79,7 +79,6 @@
   background-color: var(--dark-theme-background);
   font-size: var(--dark-theme-font-size);
   color: var(--dark-theme-primary-3);
-  text-transform: uppercase;
   font-family: monospace;
   line-height: 1.5em;
   letter-spacing: 0;
@@ -778,4 +777,70 @@
 .jg-tools-page .jg-toggle-group-container .jg-toggle-group-item.jg-toggle-group-item-is-toggled {
   border-color: var(--dark-theme-primary-3);
   color: var(--dark-theme-primary-3);
+}
+
+/*
+** Text editor
+*/
+
+.jg-text-editor {
+  width: 100%;
+  resize: none;
+  min-height: 500px;
+}
+
+.jg-text-editor.jg-hide-caret {
+  caret-color: transparent;
+}
+
+.jg-tools-page .jg-text-editor::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.jg-tools-page  .jg-text-editor::-webkit-scrollbar-track {
+  background: none;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.jg-tools-page .jg-text-editor::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border: 0;
+  background-color: var(--dark-theme-grey-100);
+  outline: none;
+  box-shadow: none;
+}
+
+.jg-tools-page .jg-text-editor::-webkit-scrollbar-corner {
+  background-color: var(--dark-theme-grey-100);
+}
+
+.jg-tools-page .jg-text-editor-footer {
+  box-sizing: border-box;
+  padding: 8px 0px 8px 0px;
+  color: var(--dark-theme-grey-180);
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.jg-tools-page .jg-text-editor-footer .jg-text-editor-footer-child {
+  display: flex;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: var(--dark-theme-grey-100);
+  border-width: 0px;
+  border-left-width: 8px;
+  align-items: center;
 }
