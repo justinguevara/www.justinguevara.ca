@@ -51,8 +51,9 @@ export default function NotesTool({
   };
 
   const character_count: number = content.length ?? 0;
-  const is_windows: boolean = content.indexOf('\t') !== -1;
-  const line_count: number = content.length === 0 ? 0 : content.split(is_windows ? '\r\n' : '\n').length;
+
+  const line_count: number = content.length === 0 ? 0 :
+    ( content.replace(/(\r\n|\n)/g, '\n') ).split('\n').length;
 
   // rework tab key behaviour when text area is focused
   const handleKeyDown = (event) => {
