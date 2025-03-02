@@ -17,7 +17,7 @@ export default function NotesTool({
   const [is_loading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setContent(localStorage.getItem('text_dump'));
+    setContent(localStorage.getItem('text_dump') ?? '');
     setTimeout(function () {
       setIsLoading(false);
     }, 1000);
@@ -50,7 +50,7 @@ export default function NotesTool({
     }, time_until_next_hit);
   };
 
-  const character_count: number = content.length;
+  const character_count: number = content.length ?? 0;
   const is_windows: boolean = content.indexOf('\t') !== -1;
   const line_count: number = content.length === 0 ? 0 : content.split(is_windows ? '\r\n' : '\n').length;
 
@@ -116,7 +116,7 @@ export default function NotesTool({
       <div className={`${styles['jg-margin-top-50']} ${styles['jg-padding-8-collapse']}`}>
         <textarea
           className={text_editor_classes}
-          spellcheck="false"
+          spellCheck="false"
           disabled={is_loading}
           onChange={handleTextEditorContentChange}
           onKeyDown={handleKeyDown}
