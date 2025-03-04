@@ -79,7 +79,6 @@ export default function GetTermDefinitionTool ({root_class = 'default', styles})
     setResults(['...']);
 
     try {
-
       const models_parameter = [];
       Object.keys(selected_toggles).forEach(function (key) {
         if ((selected_toggles[key].is_toggled ?? false) === true) {
@@ -132,7 +131,7 @@ export default function GetTermDefinitionTool ({root_class = 'default', styles})
         />
 
         <div className={`${styles['jg-padding-8-collapse']} ${styles['jg-toggle-group-container']}
-          ${styles['jg-mb-1rem']} ${styles['jg-width-66-collapse']}`}>
+          ${styles['jg-mb-1rem']} ${styles['jg-width-66-collapse']} ${styles['jg-vertical-padding']}`}>
           {toggles}
         </div>
 

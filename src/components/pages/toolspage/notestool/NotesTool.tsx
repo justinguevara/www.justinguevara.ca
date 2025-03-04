@@ -13,6 +13,9 @@ export default function NotesTool({
   styles
 }: NotesToolProps): JSX.Element {
   const [content, setContent] = useState('');
+
+  console.log(content);
+  //~``
   const [hide_content_caret, setHideContentCaret] = useState(false);
   const [is_loading, setIsLoading] = useState(true);
 
