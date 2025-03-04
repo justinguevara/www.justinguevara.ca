@@ -2,6 +2,7 @@ import MainNavigation from "components/MainNavigation";
 import TermEvaluationTool from "./termevaluationtool/TermEvaluationTool";
 import GenerateStringsTool from "./generatestringstool/GenerateStringsTool";
 import GetTermDefinitionTool from "./gettermdefinitiontool/GetTermDefinitionTool";
+import DetermineAccuracyOfStatementsTool from "./determineaccuracyofstatementstool/DetermineAccuracyOfStatementsTool";
 import NotesTool from "./notestool/NotesTool";
 import "./navigation.css"; // override  navigation styles
 import styles from "./style.module.css";
@@ -91,5 +92,10 @@ const tools_list = {
     id: 'notes',
     label: 'text dump',
     component: NotesTool
+  },
+  determine_accuracy_of_statements: {
+    id: 'determine_accuracy_of_statements',
+    label: 'evaluate statement(s)',
+    component: DetermineAccuracyOfStatementsTool
   }
 };

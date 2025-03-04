@@ -227,21 +227,23 @@
   font-family: monospace;
   line-height: 1.5em;
   letter-spacing: 0;
-}
 
-.jg-tools-page .jg-response-data {
   border-color: var(--dark-theme-white);
   outline: none;
   box-shadow: none;
-}
 
-.jg-tools-page .jg-response-data {
   text-transform: none;
   color: var(--dark-theme-grey-180);
   box-sizing: border-box;
   padding: 8px;
   border: 1px solid;
   overflow-y: auto;
+}
+
+.jg-tools-page .jg-response-data.jg-with-separated-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 /*
