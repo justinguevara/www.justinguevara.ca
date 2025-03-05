@@ -37,7 +37,6 @@ export default function GetTermDefinitionTool ({root_class = 'default', styles})
 
   const handleToggleClick = function (event: any) {
     const new_state = JSON.parse(JSON.stringify(selected_toggles));
-    console.log(event.currentTarget.getAttribute('data-index'));
     new_state[event.currentTarget.getAttribute('data-index')].is_toggled = !new_state[event.currentTarget.getAttribute('data-index')].is_toggled;
     setSelectedToggles(new_state);
   };
