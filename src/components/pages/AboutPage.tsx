@@ -4,15 +4,36 @@ function About (): JSX.Element {
   return (
     <>
         <MainNavigation/>
-        <div className="front-page">
+        <div className="front-page about-page">
             <div className="center-block-element content-width">
                 <div className="primary-content-container">
-                    <section className="first-section">
-                        <h4 style={{fontSize:'2em'}}>Hello.</h4>
-                        {/* <img src="/20250114b-min.png" alt="Description" style={{display: 'block'}} /> */}
-                        <p>For nearly a decade, I've worked as a software developer for various companies throughout Toronto, both as a freelancer and as a in-house developer.</p>
-                        <p>My career has involved a wide variety of tech projects, from WordPress brochure websites, to content websites supporting millions of users, to complex B2B SaaS systems.</p>
-                    </section>
+                    <h2>Hello.</h2>
+                    <p>For nearly a decade, I've worked as a software developer for various companies throughout Toronto, both as a freelancer and as a in-house developer.</p>
+                    <p>My career has involved a wide variety of tech projects, from WordPress brochure websites, to content websites supporting millions of users, to complex B2B SaaS systems.</p>
+                    <h3 className="mt-8">www.justinguevara.ca - tech stack details.</h3>
+                    <ul >
+                        <li>Backend</li>
+                            <ul>
+                                <li>The site's backend is written in PHP and uses the Laravel web framework.</li>
+                                <li>A MariaDB instance hosted on AWS Lightsail is used for persisting data.</li>                  
+                                <li>The webapp is served by Nginx.</li>
+                                <li>Nginx itself runs within Docker containers running a Debian 12 environment.</li>
+                                <li>These docker containers are run from within AWS Lightsail instances.</li>
+                            </ul>
+                        <li className="mt-3">Frontend</li>
+                            <ul>
+                                <li>
+                                    The frontend app is written in TypeScript, and uses the frontend framework React, along with Vite.
+                                </li>
+                                <li>
+                                    For hosting, the compiled project is hosted on AWS Cloudfront in combination with AWS S3.
+                                </li>
+                            </ul>
+                        <li className="mt-3">Misc.</li>
+                            <ul>
+                                <li>Domain names were purchased through Namecheap, but are managed through AWS Route 53. Namecheap's name servers have been configured to redirect to AWS.</li>
+                            </ul>
+                    </ul>
                 </div>
             </div>
         </div>

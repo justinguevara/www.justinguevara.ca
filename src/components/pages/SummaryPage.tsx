@@ -12,7 +12,7 @@ export default function SummaryPage (): JSX.Element {
                         <h3>Overview</h3>
                         <p>
                         I have 7+ years of professional experience in web/software development, mostly with PHP/LAMP based tech stacks. <br/>
-                        The work I've done has leaned towards backend/server development, but ultimately, I'm comfortable with building and maintaining systems end-to-end. This includes frontend development and managing infrastructure.
+                        The work I've done has leaned towards backend/server development, but ultimately, I build and maintain systems end-to-end. This includes frontend development and managing infrastructure.
                         </p>
 
                         <h3>History</h3>
@@ -41,7 +41,7 @@ export default function SummaryPage (): JSX.Element {
                             </li>
                         </ul>
                         <p>
-                        I would be happy to hear about your next web related project, even if you're just looking to solicit an opinion. <br/> 
+                        <br/> 
                         Email me at j@guevarajust.in.
                         </p>
                     </section>
