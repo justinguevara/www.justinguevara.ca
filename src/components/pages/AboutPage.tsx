@@ -14,7 +14,7 @@ function About (): JSX.Element {
                     <ul >
                         <li>Backend</li>
                             <ul>
-                                <li>The site's backend is written in PHP and uses the Laravel web framework.</li>
+                                <li>The site's backend is written in PHP and uses the PHP web framework Laravel.</li>
                                 <li>A MariaDB instance hosted on AWS Lightsail is used for persisting data.</li>                  
                                 <li>The webapp is served by Nginx.</li>
                                 <li>Nginx itself runs within Docker containers running a Debian 12 environment.</li>
