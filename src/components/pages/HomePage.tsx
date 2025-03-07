@@ -1,15 +1,11 @@
 import MainNavigation from "components/MainNavigation";
 
-function HomePage (): JSX.Element {
+export default function HomePage (): JSX.Element {
   return (
     <>
       <MainNavigation />
       <div className="front-page">
         <div className="center-block-element content-width">
-          <div className="feature-container">
-            <div className="home-heading-background">
-            </div>
-          </div>
           <div className="primary-content-container">
             <section className="first-section">
               <div className="name">Justin Guevara</div>
@@ -35,5 +31,3 @@ function HomePage (): JSX.Element {
     </>
   );
 };
-
-export default HomePage;

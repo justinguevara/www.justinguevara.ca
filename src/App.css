@@ -96,57 +96,6 @@ a {
   }
 }
 
-@media screen and (min-width:481px) {
-  .front-page .feature-container {
-    margin-top: 8px;
-  }
-}
-
-.front-page .feature-container {
-  margin-top: 8px;
-  box-sizing: content-box;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-/* TODO - should be an image, not a div*/
-.front-page .home-heading-background {
-  background: url('/jan31.png') no-repeat;
-
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 1025px) {
-  .front-page .home-heading-background {
-    margin-bottom: 16px;
-  }
-}
-
-
-@media screen and (max-width: 480px) {
-  .front-page .home-heading-background {
-    height: 184px;
-    background-size: 1400px;
-    background-position: center center;
-  }
-}
-
-@media screen and (max-width:1024px) and (min-width:481px) {
-  .front-page .home-heading-background {
-    height: 202px;
-    background-size: 1525px;
-    background-position: left top;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .front-page .home-heading-background {
-    height: 374px;
-    background-position: left top;
-  }
-}
-
 .front-page .quotes .quote .person {
   text-align: right
 }
@@ -202,19 +151,22 @@ a {
 
 @media screen and (min-width: 1024px) {
   .front-page .name {
-    font-size: 64px;
+    font-size: 54px;
+    margin-top: 32px;
   }
 }
 
 @media screen and (min-width: 721px) and (max-width: 1023px) {
   .front-page .name {
-    font-size: 56px;
+    font-size: 54px;
+    margin-top: 32px;
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 720px) {
   .front-page .name {
-    font-size: 54px
+    font-size: 54px;
+    margin-top: 16px;
   }
 }
 
@@ -512,4 +464,30 @@ a {
 
 .default .compact-list li {
   padding-left: 0px;
+}
+
+
+
+
+
+
+
+
+
+.test {
+  position: relative;
+  height: 200px;
+/*
+    right: 40vw;  10% of the viewport width */
+
+}
+
+.test-container-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.test-container {box-sizing: border-box; padding: 16px;
 }

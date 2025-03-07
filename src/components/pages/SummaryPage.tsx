@@ -40,6 +40,10 @@ export default function SummaryPage (): JSX.Element {
                                 </ul>
                             </li>
                         </ul>
+
+                        <h3>Contact</h3>
+                        <p>Email - j@guevarajust.in</p>
+
                     </section>
                 </div>
             </div>
