@@ -1,0 +1,10 @@
+version: '3'
+services: 
+  web:
+    image: react
+    build: container
+    ports: 
+      - '5173:5173'
+    container_name: react
+    volumes:
+      - "/example:/home/app"

@@ -1,7 +1,3 @@
-/*
- * 2018 
- */
-
 *,
 :after,
 :before {
@@ -69,6 +65,14 @@ a {
 .center-block-element {
   margin-left: auto;
   margin-right: auto
+}
+
+.default .mt-3 {
+  margin-top: 12px;
+}
+
+.default .mt-8 {
+  margin-top: 32px;
 }
 
 /*
@@ -489,22 +493,23 @@ a {
   width: 100%;
 }
 
+.default .mt-3 {
+  margin-top: 12px;
+}
+
+.default .mt-8 {
+  margin-top: 32px;
+}
+
 /*
-** About page
+** Compact list
 */
-.about-page ul {
+.default ul.compact-list,
+.default .compact-list ul {
   padding-left: 8px;
   margin-left: 8px;
 }
 
-.about-page li {
+.default .compact-list li {
   padding-left: 0px;
-}
-
-.about-page .mt-3 {
-  margin-top: 12px;
-}
-
-.about-page .mt-8 {
-  margin-top: 32px;
 }

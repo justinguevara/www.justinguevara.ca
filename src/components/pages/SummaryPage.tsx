@@ -4,7 +4,7 @@ export default function SummaryPage (): JSX.Element {
   return (
     <>
         <MainNavigation/>
-        <div className="front-page">
+        <div className="front-page default">
             <div className="center-block-element content-width">
                 <div className="primary-content-container">
                     <section className="first-section">
@@ -16,7 +16,7 @@ export default function SummaryPage (): JSX.Element {
                         </p>
 
                         <h3>History</h3>
-                        <ul>
+                        <ul className="compact-list">
                             <li>Allied Technical Solutions Inc.</li>
                                 <ul>
                                     <li>2 years</li>
@@ -40,10 +40,6 @@ export default function SummaryPage (): JSX.Element {
                                 </ul>
                             </li>
                         </ul>
-                        <p>
-                        <br/> 
-                        Email me at j@guevarajust.in.
-                        </p>
                     </section>
                 </div>
             </div>
