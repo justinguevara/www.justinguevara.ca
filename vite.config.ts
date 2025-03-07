@@ -16,5 +16,10 @@ export default defineConfig({
   ],
   build: {
     cssMinify: 'esbuild'
-  }
+  },
+  server: {
+    watch: {
+      usePolling: true
+    },
+  },
 });
