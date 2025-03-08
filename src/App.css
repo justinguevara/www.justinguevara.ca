@@ -248,6 +248,7 @@ a {
 */
 .canvas {
   position: relative;
+  z-index: 1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -259,14 +260,14 @@ a {
 
 @media screen and (min-width: 721px) and (max-width: 1023px) {
   .canvas {
-    right: 20vw;
+    right: 5vw;
     height: 200px;
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 720px) {
   .canvas {
-    right: 50vw;
+    right: 5vw;
     height: 200px;
   }
 }
@@ -321,6 +322,7 @@ a {
   margin: 0;
   padding-inline-start: 0;
   background-color: rgb(241, 242, 242);
+  
 }
 
 .header-primary .mobile-menu-bar {
@@ -405,6 +407,7 @@ a {
     height: 100vh;
     background-color: white;
     opacity: 0.98;
+    z-index: 10;
   }
 
   .default #menu-menu-1 .menu-item {
