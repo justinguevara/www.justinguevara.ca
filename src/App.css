@@ -466,28 +466,48 @@ a {
   padding-left: 0px;
 }
 
+/*
+** Home page canvas
+*/
 
-
-
-
-
-
-
-
-.test {
+.canvas {
   position: relative;
   height: 200px;
-/*
-    right: 40vw;  10% of the viewport width */
-
 }
 
-.test-container-container {
+@media screen and (min-width: 1024px) {
+  .canvas{
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1023px) {
+  .canvas {
+    right: 20vw;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  .canvas {
+    right: 50vw;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .canvas {
+    right: 20vw;
+    height: 80px;
+  }
+}
+
+.canvas-inner-container {
   width: 100%;
   overflow: hidden;
 }
 
-
-
-.test-container {box-sizing: border-box; padding: 16px;
+.canvas-container{
+  box-sizing: border-box;
+  padding: 16px;
 }
