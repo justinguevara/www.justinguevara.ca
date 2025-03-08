@@ -242,6 +242,76 @@ a {
   text-decoration: underline
 }
 
+
+/*
+** Home page - canvas
+*/
+.canvas {
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .canvas{
+    height: 200px;
+    left: 6px;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1023px) {
+  .canvas {
+    right: 20vw;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  .canvas {
+    right: 50vw;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .canvas {
+    right: 28vw;
+    top: 0px;
+  }
+}
+
+.canvas-inner-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .canvas-inner-container {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1023px) {
+  .canvas-inner-container {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  .canvas-inner-container {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .canvas-inner-container {
+    height: 88px;
+  }
+}
+
+.canvas-container{
+  box-sizing: border-box;
+  padding: 16px;
+}
+
 /*
  * Global - Primary navigation menu
  */
@@ -464,50 +534,4 @@ a {
 
 .default .compact-list li {
   padding-left: 0px;
-}
-
-/*
-** Home page canvas
-*/
-
-.canvas {
-  position: relative;
-  height: 200px;
-}
-
-@media screen and (min-width: 1024px) {
-  .canvas{
-    height: 200px;
-  }
-}
-
-@media screen and (min-width: 721px) and (max-width: 1023px) {
-  .canvas {
-    right: 20vw;
-    height: 200px;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 720px) {
-  .canvas {
-    right: 50vw;
-    height: 200px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .canvas {
-    right: 20vw;
-    height: 80px;
-  }
-}
-
-.canvas-inner-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.canvas-container{
-  box-sizing: border-box;
-  padding: 16px;
 }

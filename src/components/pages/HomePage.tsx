@@ -10,7 +10,7 @@ export default function HomePage (): JSX.Element {
     var random = new seedrandom(seed);
     for (let y = 0; y < canvas_height; y++) {
       for (let x = 0; x < canvas_width; x++) {
-        if (normalizeNumber(x, 0, canvas_width)  <  random()) {
+        if (normalizeNumber(x, 0, canvas_width) < random()) {
           const random_color = 'rgb(' + color_palette[Math.floor( (random() * color_palette.length) )].join(', ') + ')';
           context.fillStyle = random_color;
           context.fillRect(x * pixel_size, y * pixel_size, pixel_size, pixel_size);
@@ -26,7 +26,7 @@ export default function HomePage (): JSX.Element {
         <div className="center-block-element content-width">
           <div className="canvas-container">
             <div className="canvas-inner-container">
-              <canvas className="canvas" ref={canvas_reference} width={canvas_width} />
+              <canvas className="canvas" ref={canvas_reference} width={canvas_width} height={canvas_height} />
             </div>
           </div>
 
@@ -56,7 +56,7 @@ export default function HomePage (): JSX.Element {
   );
 };
 
-const canvas_height = 198;
+const canvas_height = 154;
 const canvas_width = 1148;
 const pixel_size = 22;
 const seed = '5';
